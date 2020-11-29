@@ -1,0 +1,976 @@
+,Text
+0,XLNet: General AutoregressPretraining for Language Understanding
+1,With the capability of modeling bidtional contexts denoising autoencoding based pretraining lBERT achieves better performance than pretraining approaches based on autoregresslanguage modeling
+2,However relying on corrupting the input with masks BERT neglects dependency between the masked positions and suffers from a pretrain-fune discrepancy
+3,In light of these pros and cons we propose XLNet a general autoregresspretraining method that (1) enables learning bidtional contexts by maximizing the expected lihood over all permutations of the factorization order and (2) overcomes the limitations of BERT thanks to its autoregressformulation
+4,Furthermore XLNet integrates s from Transformer-XL the state-of-the-art autoregressmodel into pretraining
+5,"Empirically under comparable expert settings XLNet outperforms BERT on 20 tasks often by a large margin including question answering natural language inference sentt analysis and document ranking.Bert is a transformer which is costituted as a stack of LSTMs
+"
+6,RoBERTa: A Robustly Optim BERT Pretraining Approach
+7,Language model pretraining has led to significant performancins but careful comparison between different approaches is challng
+8,Training is computationally expensoften done on private datasets of different s and as we will show hyperparameter cho have significant impact on the final results
+9,We present a replication study of BERT pretraining (Devlin  2019) that carefully measures the impact of many key hyperparameters and training data s We find that BERT was significantly undertra and can match or exceed the performance of every model published after it
+10,Our best model achieves state-of-the-art results on GLUE RACE and SQuAD
+11,These results highlight the importance of previously overlooked design cho and raquestions about the source of recently reported improvements
+12,"We release our models and code.We find that BERT was significantly undertra and propose an improved recfor training BERT models which we call RoBERTa that can match or exceed the performance of all of the post-BERT methods.
+"
+13,Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks
+14,Natural language is hierarchically structured: smaller units ( phrases) are nested within larger units ( clauses)
+15,When a larger constituent ends all of the smaller constituents that are nested within it must also be closed
+16,Whthe standard LSTM archture allows different neurons to track information at different tscales it does not have an explicit bias towards modeling a hierarchy of constituents
+17,This paper proposes to add such an inductbias by ordering the neurons; a vector of master input and forget gates ensures that when a g neuron is updated all the neurons that follow it in the ordering are also updated
+18,"Our novel recurrent archture ordered neurons LSTM (ON-LSTM) achieves good performance on four different tasks: language modeling unsuperv parsing targeted syntactaluation and logical inference.
+"
+19,BERT: Pre-training of Deep Bidtional Transformers for Language Understanding: We introduce a new language representation model called BERT which stands for Bidtional Encoder Representations from Transformers
+20,Unlrecent language representation models BERT is designed to pre-train deep bidtional representations from unlabeled text by jointly conditioning on both left and right context in all layers
+21,As a result the pre-tra BERT model can be ftuned with just one additional output layer to create state-of-the-art models for a wrange of tasks such as question answering and language inference without substantial task-specific archture modifications
+22,BERT is conceptually simple and empirically powerful
+23,"It obtains new state-of-the-art results on eleven natural language processing tasks.
+"
+24,RelationNet++: Bridging Visual Representations for Object Detection via Transformer Decoder
+25,Existing object detection frameworks are usually built on a single format of object/part representation  anchor/proposal rectangle boxes in RetinaNet and Faster R-CNN center points in FCOS and RepPoints and corner points in CornerNet
+26,Whthese different representations usually drthe frameworks to perform well in different aspects  better classification or f localization it is in general difficult to combthese representations in a single framework to makod use of each strh due to the heterogeneous or non-grid feature extraction by different representations
+27,This paper presents an attention-based decoder module similar as that in Transformer~\cvaswani2017attention} to bridge other representations into a typical object detector built on a single representation format in an end-to-end fashion
+28,The other representations act as a set of \emph{key} instances to strhen the main \emph{query} representation features in the vanilla detectors
+29,Novel techniques are proposed towards efficient computation of the decoder module including a \emph{key sampling} approach and a \emph{shared location embedding} approach
+30,The proposed module is named \emph{bridging visual representations} (BVR)
+31,It can perform in-place and we demonstrate its broad effectess in bridging other representations into prevalent object detection frameworks including RetinaNet Faster R-CNN FCOS and ATSS
+32,"The resulting network is named RelationNet++.
+"
+33,Graph-based Topic Extraction from Vector Embeddings of Text Documents: Application to a Corpus of News Articles: Production of news content is growing at an astonishing rate
+34,To help manage and monitor the sheer amount of text there is an increasing need to develop efficient methods that can provinsights into emng content areas and stratify unstructured corpora of text into `topics' that stem intrinsically from content similarity
+35,Here we present an unsuperv framework that brings together powerful vector embeddings from natural language processing with tools from multiscalaph partitioning that can reveal natural partitions at different resolutions without making a priori assumptions about the number of clusters in the corpus
+36,We show the advantages of graph-based clustering through end-to-end comparisons with other popular clustering and topic modelling methods and also evaluate different text vector embeddings from classic Bag-of-Words to Doc2Vec to the recent transformers based model Bert
+37,"This comparatwork is showcased through an analysis of a corpus of US news coverage during the prestial election year of 2016.
+"
+38,Peak Detection On Data Independent Acquisition Mass Spectrometry Data With Semisuperv Convolutional Transformers: Liquid Chromatography coupled to Mass Spectrometry (LC-MS) based methods are commonly used for high-throughput quantitatmeasurements of the proteome ( the set of all proteins in a sample at a g t
+39,Targeted LC-MS produces data in the form of a two-dsional tseries spectrum with the mass to charge ratio of analytes (m/z) on one axis and the retention tfrom the chromatography on the other
+40,The elution of a peptof interest produces highly specific patterns across multiple fragment ion traces (extracted ion chromatograms or XICs)
+41,In this paper we formulate this peak detection problem as a multivariate tseries segmentation problem and propose a novel approach based on the Transformer archture
+42,Here we augment Transformers which are capable of capturing long distance dependencies with a global view with Convolutional Neural Networks (CNNs) which can capture local context important to the task at hand in the form of Transformers with Convolutional Self-Attention
+43,We further train this model in a semisuperv manner by adapting state of the art semisuperv image classification techniques for multi-channel tseries data
+44,"Experts on a representatLC-MS dataset are benchmarked using manual annotations to showcase the encouraging performance of our method; it outperforms baselneural network archtures and is competitagainst the current state of the art in automated peak detection.
+"
+45,ReadOnce Transformers: Reusable Representations of Text for Transformers: Whlarge-scale language models are extremely effectwhen dtly ftuned on many end-tasks such models learn to extract information and solve the task simultaneously from end-task supervision
+46,This is wasteful as thneral problem of gathering information from a document is mostly task-independent and need not be re-learned from scratch each t Moreover once the information has been captured in a computable representation it can now be re-used across examples leading to faster training and evaluation of models
+47,We present a transformer-based approach ReadOnce Transformers that is tra to build such information-capturing representations of text
+48,Our model compresses the document into a variable-lh task-independent representation that can now be re-used in different examples and tasks thereby requiring a document to only be read once
+49,Additionally we extend standard text-to-text models to consume our ReadOnce Representations along with text to solve multiple downstream tasks
+50,We show our task-independent representations can be used for multi-hop QA abstractQA and summarization
+51,"We observe 2x-5x speedups compared to standard text-to-text models whalso being able to handle long documents that would normally exceed the lh limit of current models.
+"
+52,Inducing Taxonomic Knowl from Pretra Transformers: We present a method for inducing taxonomic trees from pretra transformers
+53,G a set of input terms we assign a score for the lihood that each pair of terms forms a parent-child relation
+54,To produce a tree from pairwparent-child  scores we treat this as a graph optimization problem and output the maximum spanning tree
+55,We train the model by funing it on parent-child relations from subtrees of WordNet and test on non-overlapping subtrees
+56,In addition we incorporate semi-structured definitions from the web to further improve performance
+57,"On the task of inducing subtrees of WordNet the model achieves 66.0 ancestor F_1 a 10.4 point absolute increase over the previous best published result on this task.
+"
+58,Multi-Unit Transformers for Neural MachTranslation: Transformer models achieve remarkable success in Neural MachTranslation
+59,Many efforts have been devoted to deepening the Transformer by stacking several units ( a combination of Multd Attentions and FFN) in a cascade whthe investigation over multiple parallel units draws little attention
+60,In this paper we propose the Multi-Unit Transformers (MUTE) which aim to promote the expressess of the Transformer by introducing dse and complementary units
+61,Specifically we use several parallel units and show that modeling with multiple units improves model performance and introduces dsity
+62,Further to better leverage the advantage of the multi-unit setting we design biased module and sequential dependency that guand encourage complementars among different units
+63,Expertal results on three machtranslation tasks the NIST Che-to-English WMT'14 English-to-German and WMT'18 Che-to-English show that the MUTE models significantly outperform the Transformer-Base by up to +1.52 +1.90 and +1.10 BLEU points with only a mild drop in inference speed (about 3.1%)
+64,In addition our methods also surpass the Transformer-Big model with only 54\% of its parameters
+65,"These results demonstrate the effectess of the MUTE as well as its efficiency in both the inference process and parameter usage.
+"
+66,Investigating the True Performance of Transformers in Low-Resource Languages: A Case Study in Automatic Corpus Creation: Transformers represent the state-of-the-art in Natural Language Processing (NLP) in recent years proving effecteven in tasks done in low-resource languages
+67,Whpretra transformers for these languages can be made it is challng to measure their true performance and capacity due to the lack of hard benchmark datasets as well as the difficulty and cost of producing them
+68,In this paper we present three contributions: First we propose a methodology for automatically producing Natural Language Inference (NLI) benchmark datasets for low-resource languages using published news articles
+69,Through this we create and release NewsPH-NLI the first sentence entailment benchmark dataset in the low-resource Filipino language
+70,Second we produce new pretra transformers based on the ELECTRA technique to further alleviate the resource scarcity in Filipino benchmarking them on our dataset against other commonly-used transfer learning techniques
+71,"Lastly we perform analyses on transfer learning techniques to shed light on their true performance when operating in low-data domains through the use of degradation tests.
+"
+72,Measuring Systematic Generalization in Neural Proof Generation with Transformers: We are interested in understanding how well Transformer language models (TLMs) can perform reasoning tasks when tra on knowl encoded in the form of natural language
+73,We investigate their systematic generalization abilities on a logical reasoning task in natural language which involves reasoning over relationships between entities grounded in first-order logical proofs
+74,Specifically we perform soft theorem-proving by leveraging TLMs to generate natural language proofs
+75,We test thnerated proofs for logical consistency along with the accuracy of the final inference
+76,We observe lh-generalization issues when evaluated on longer-than-tra sequences
+77,However we observe TLMs improve their generalization performance after being exposed to longer exhaustproofs
+78,In addition we discover that TLMs are able to generalbetter using backward-chaining proofs compared to their forward-chaining counterparts whthey find sier to generate forward chaining proofs
+79,We observe that models that are not tra to generate proofs are better at generalizing to problems based on longer proofs
+80,This suggests that Transformers have efficient internal reasoning strategies that are harder to interpret
+81,"These results highlight the systematic generalization behavior of TLMs in the context of logical reasoning and we believe this work motivates deeper inspection of their underlying reasoning strategies.
+"
+82,Parameter Norm Growth During Training of Transformers: The capacity of neural networks lthe wy adopted transformer is known to be very high
+83,Evce ng that they learn successfully due to inductbias in the training routtypically some variant of gradient descent (GD)
+84,To better understand this bias we study the tendency of transformer parameters to grow in magnitude during training
+85,We find both theoretically and empirically that in certain contexts GD increases the parameter l2 norm up to a threshold that itself increases with training-set accuracy
+86,This means increasing training accuracy over tenables the norm to increase
+87,Empirically we show that the norm grows continuously over pretraining for T5 (Raffel  2019)
+88,We show that pretra T5 approximates a semi-discret network with saturated activation functions
+89,"Such ""saturated"" networks are known to have a reduced capacity compared to the original network family that can be descr in automata-theoretic terms"
+90,This suggests saturation is a new characterization of an inductbias implicit in GD that is of particular interest for NLP
+91,"Whour experts focus on transformers our theoretical analystends to other archtures with similar formal properties such as feedforward ReLU networks.
+"
+92,Deep Transformers with Latent Depth: The Transformer model has achieved state-of-the-art performance in many sequence modeling tasks
+93,However how to leverage model capacity with large or variable depths is still an open chall
+94,We present a probabilistic framework to automatically learn which layer(s) to use by learning the posterior distributions of layer selection
+95,As an extension of this framework we propose a novel method to train one shared Transformer network for multilingual machtranslation with different layer selection posteriors for each language pair
+96,The proposed method alleviates the vanishing gradient issue and enables stable training of deep Transformers ( 100 layers)
+97,We evaluate on WMT English-German machtranslation and masked language modeling tasks where our method outperforms existing approaches for training deeper Transformers
+98,"Experts on multilingual machtranslation demonstrate that this approach can effecty leverage increased model capacity and bring unsal improvement for both many-to-one and one-to-many translation with dse language pairs.
+"
+99,Empirical Study of Transformers for Source Code: Initially developed for natural language processing (NLP) Transformers are now wy used for source code processing due to the format similarity between source code and text
+100,In contrast to natural language source code is strictly structured  follows the syntax of the programming language
+101,Several recent works develop Transformer modifications for capturing syntactic information in source code
+102,The drawback of these works is that they do not compare to each other and all cons different tasks
+103,In this work we conduct a thorough empirical study of the capabilities of Transformers to utilsyntactic information in different tasks
+104,We cons three tasks (code completion function naming and bug fixing) and re-implement different syntax-capturing modifications in a unified framework
+105,"We show that Transformers are able to make meaningful predictions based purely on syntactic information and underlthe best pract of taking the syntactic information into account for improving the performance of the model.
+"
+106,Calibration of Pre-tra Transformers: Pre-tra Transformers are now ubiquitous in natural language processing but desptheir high end-task performance little is known empirically about whether they are calibrated
+107,Specifically do these models' posterior probabilities provan accurate empirical measure of how ly the model is to be correct on a g example? We focus on BERT and RoBERTa in this work and analyze their calibration across three tasks: natural language inference paraphrase detection and commonsense reasoning
+108,For each task we cons in-domain as well as challng out-of-domain settings where models face more examples they should be uncertain about
+109,"We show that: (1) when used out-of-the-box pre-tra models are calibrated in-domain and compared to basel their calibration error out-of-domain can be as much as 3.5x lower; (2) temperature scaling fectat further reducing calibration error in-domain and using label smoothing to delately increase empirical uncertainty helps calibrate posteriors out-of-domain.
+"
+110,SubjectQuestion Answering: Deciphering the inner workings of Transformers in the realm of subjectivity: Understanding subjectivity demands reasoning skills beyond the realm of common knowl
+111,It requ a machlearning model to process sentt and to perform opinion mining
+112,In this work I've explo a recently released dataset for span-selection Question Answering namely SubjQA
+113,SubjQA is the first QA dataset that contains questions that ask for subjectopinions corresponding to review paragraphs from six different domains
+114,Hence to answer these subjectquestions a learner must extract opinions and process sentt for various domains and additionally align the knowl extracted from a paragraph with the natural language utterances in the corresponding question which together enhance the difficulty of a QA task
+115,"The primary goal of this thesis was to investigate the inner workings ( latent representations) of a Transformer-based archture to contribute to a better understanding of these not yet well understood ""black-box"" models"
+116,Transformer's hidden representations concerning the true answer span are clustered more closely in vector space than those representations corresponding to erroneous predictions
+117,This observation holds across the top three Transformer layers for both objectand subjectquestions and generally increases as a function of layer dsions
+118,Moreover the probability to achieve a high cossimilarity among hidden representations in latent space concerning the true answer span tokens is significantly higher for correct compared to incorrect answer span predictions
+119,"These results have decisimplications for down-stream applications where it is crucial to know about why a neural network made mistakes and in which point in space and tthe mistake has happened ( to automatically predict correctness of an answer span prediction without the necessity of labeled data).
+"
+120,Assessing Phrasal Representation and Composition in Transformers: Deep transformer models have pushed performance on NLP tasks to new limits suggesting sophisticated treatment of complex linguistic inputs such as phrases
+121,However we have lim understanding of how these models handle representation of phrases and whether this reflects sophisticated composition of phrase meaning lthat done by humans
+122,In this paper we present systematic analysis of phrasal representations in state-of-the-art pre-tra transformers
+123,We use tests leveraging human judgments of phrase similarity and meaning shift and compare results before and after control of word overlap to tease apart lexical effects versus composition effects
+124,We find that phrase representation in these models relies heavily on word content with little evce of nuanced composition
+125,"We also tify variations in phrase representation quality across models layers and representation types and make corresponding recommendations for usage of representations from these models.
+"
+126,Pretra Transformers for Text Ranking: BERT and Beyond: Thal of text ranking is to generate an ordered list of texts retrieved from a corpus in response to a query
+127,Although the most common formulation of text ranking is search instances of the task can also be found in many natural language processing applications
+128,This survey prov an overview of text ranking with neural network archtures known as transformers of which BERT is the best-known example
+129,The combination of transformers and self-superv pretraining has without exaggeration revolution the fields of natural language processing (NLP) information retrieval (IR) and beyond
+130,In this survey we prova synthesis of existing work as a single point of entry for practitioners who wish to gain a better understanding of how to apply transformers to text ranking problems and researchers who wish to pursue work in this area
+131,We cover a wrange of modern techniques grouped into two high-level categories: transformer models that perform reranking in multi-stage ranking archtures and learned dense representations that attempt to perform ranking dtly
+132,There are two themes that pervade our survey: techniques for handling long documents beyond the typical sentence-by-sentence processing approaches used in NLP and techniques for addressing the tradeoff between effectess (result quality) and efficiency (query latency)
+133,Although transformer archtures and pretraining techniques are recent innovations many aspects of how they are applied to text ranking are relaty well understood and represent mature techniques
+134,"However there remain many open research questions and thus in addition to laying out the foundations of pretra transformers for text ranking this survey also attempts to prognosticate where the field is heading.
+"
+135,Dissecting Lottery Ticket Transformers: Structural and Behavioral Study of Sparse Neural MachTranslation: Recent work on the lottery ticket hypothesis has produced highly sparse Transformers for NMT whmaintaining BLEU
+136,However it is unclear how such pruning techniques affect a model's learned representations
+137,By probing Transformers with more and more low-magnitude wts pruned away we find that complex semantic information is first to be degraded
+138,Analysis of internal activations reveals that higher layers div most over the course of pruning gradually becoming less complex than their dense counterparts
+139,Meanwhearly layers of sparse models begin to perform more encoding
+140,"Attention mechanisms remain remarkably consistent as sparsity increases.
+"
+141,On the Computational Power of Transformers and its Implications in Sequence Modeling: Transformers are being used extensy across several sequence modeling tasks
+142,Significant research effort has been devoted to expertally probe the inner workings of Transformers
+143,However our conceptual and theoretical understanding of their power and inherent limitations is still nascent
+144,In particular the roles of various components in Transformers such as positional encodings attention heads residual connections and feedforward networks are not clear
+145,In this paper we take a step towards answering these questions
+146,We analyze the computational power as captured by Turing-completeness
+147,We first provan alternate and simpler proof to show that vanilla Transformers are Turing-complete and then we prove that Transformers with only positional masking and without any positional encoding are also Turing-complete
+148,We further analyze the necessity of each component for the Turing-completeness of the network; interestingly we find that a particular type of residual connection is necessary
+149,"We demonstrate the practical implications of our results vperts on machtranslation and synthetic tasks.
+"
+150,Query-Key Normalization for Transformers: Low-resource language translation is a challng but socially valuable NLP task
+151,Building on recent work adapting the Transformer's normalization to this setting we propose QKNorm a normalization technique that modifies the attention mechanism to make the softmax function less prone to arbitrary saturation without sacrificing expressivity
+152,Specifically we apply l2 normalization along the head dsion of each query and key matrix prior to multiplying them and then scale up by a learnable parameter instead of dividing by the square root of the embedding dsion
+153,"We show improvements averaging 0.928 BLEU over state-of-the-art bilingual benchmarks for 5 low-resource translation pairs from the TED Talks corpus and IWSLT'15.
+"
+154,EdinburghNLP at WNUT-2020 Task 2: Leveraging Transformers with General Augmentation for Identifying Informatess in COVID-19 Tweets: Twitter has become an important communication channel in t of emncy
+155,The ubiquitousness of smartphones enables people to announce an emncy they're observing in real-t Because of this more agencies are interested in programatically monitoring Twitter (disaster relief organizations and news agencies) and therefore recognizing the informatess of a tweet can help filter nofrom large volumes of data
+156,In this paper we present our submission for WNUT-2020 Task 2: Identification of informatCOVID-19 English Tweets
+157,Our most successful model is an ensemble of transformers including RoBERTa XLNet and BERTweet tra in a semi-superv expertal setting
+158,"The proposed system achieves a F1 score of 0.9011 on the test set (ranking 7th on the leaderboard) and shows significant gains in performance compared to a baselsystem using fasttext embeddings.
+"
+159,On the Ability and Limitations of Transformers to RecognFormal Languages: Transformers have supplanted recurrent models in a large number of NLP tasks
+160,However the differences in their abilities to model different syntactic properties remain largely unknown
+161,Past works suggest that LSTMs generalvery well on regular languages and have close connections with counter languages
+162,In this work we systematically study the ability of Transformers to model such languages as well as the role of its individual components in doing so
+163,We first prova construction of Transformers for a subclass of counter languages including well-studied languages such as n-ary Boolean Expressions Dyck-1 and its generalizations
+164,In experts we find that Transformers do well on this subclass and their learned mechanism strongly correlates with our construction
+165,Perhaps surprisingly in contrast to LSTMs Transformers do well only on a subset of regular languages with degrading performance as we make languages more complex according to a well-known measure of complexity
+166,"Our analysis also prov insights on the role of self-attention mechanism in modeling certain behaviors and the influence of positional encoding schemes on the learning and generalization abilities of the model.
+"
+167,Learning to Fuse Sentences with Transformers for Summarization: The ability to fuse sentences is highly attractfor summarization systems because it is an essential step to produce succinct abstracts
+168,However to date summars can fail on fusing sentences
+169,They tend to produce few summary sentences by fusion or generate incorrect fusions that lead the summary to fail to retain the original meaning
+170,In this paper we explore the ability of Transformers to fuse sentences and propose novel algorithms to enhance their ability to perform sentence fusion by leveraging the knowl of points of correspondence between sentences
+171,Through extensexperts we investigate the effects of different design cho on Transformer's performance
+172,"Our findings highlight the importance of modeling points of correspondence between sentences for effectsentence fusion.
+"
+173,Convolutional Neural Networks for Global Human Settlements Mapping from Sent-2 SatellImagery: Spatially consistent and up-to-date maps of human settlements are crucial for addressing policies related to urbanization and sustainability especially in the era of an increasingly urban world.The availability of open and free Sent-2 data of the Copernicus Earth Observation program offers a new opportunity for wall-to-wall mapping of human settlements at a global scale.This paper presents a deep-learning-based framework for a fully automated extraction of built-up areas at a spatial resolution of 10 m from a global composof Sent-2 imagery.A multi-neuro modeling methodology building on a simple Convolution Neural Networks archture for p-wimage classification of built-up areas is developed.The core features of the proposed model are the image patch of s5 x 5 ps adequate for describing built-up areas from Sent-2 imagery and the lightwt topology with a total number of 1448578 trainable parameters and 4 2D convolutional layers and 2 flattened layers.The deployment of the model on thobal Sent-2 image composprov the most deta and complete map reporting about built-up areas for reference year 2018
+174,"The validation of the results with an independent reference data-set of building footprints covering 277 s across the world establishes the reliability of the built-up layer produced by the proposed framework and the model robustness.
+"
+175,Ground Roll Suppression using Convolutional Neural Networks: Seismic data processing plays a major role in seismploration as it conditions much of the seismic interpretation performance
+176,In this context generating reliable post-stack seismic data depends also on disposing of an efficient pre-stack noattenuation tool
+177,Here we tacklound roll noone of the most challng and common no observed in pre-stack seismic data
+178,Sincound roll is character by relatlow frequencies and high amplitudes most commonly used approaches for its suppression are based on frequency-amplitude filters for ground roll characteristic bands
+179,However when signal and noshare the same frequency ranges these methods usually del also signal suppression or residual no In this paper we take advantage of the highly non-lr features of convolutional neural networks and propose to use different archtures to detect ground roll in shot gathers and ultimately to suppress them using conditional generatadversarial networks
+180,Additionally we propose metrics to evaluatound roll suppression and report strong results compared to expert filtering
+181,"Finally we discuss generalization of tra models for similar and different geologies to better understand the feasibility of our proposal in real applications.
+"
+182,Robust Template Matching via Hierarchical Convolutional Features from a Shape Biased CNN: Finding a template in a search image is an important task underlying many computer vision applications
+183,Recent approaches perform template matching in a deep feature space produced by a convolutional neural network (CNN) which is found to provmore tolerance to changes in appearance
+184,In this article we investigate hancing the CNN's encoding of shape information can produce more distinguishable features that improve the performance of template matching
+185,This investigation results in a new template matching method that produces state-of-the-art results on a standard benchmark
+186,To confirm these results we also create a new benchmark and show that the proposed method also outperforms existing techniques on this new dataset
+187,"We further applied the proposed method to tracking and achieved more robust results.
+"
+188,The GCE in a New Light: Dtangling the γ-ray Sky with Bayesian Graph Convolutional Neural Networks: A fundamental question regarding the Galactic Center Excess (GCE) is whether the underlying structure is point-lor smooth
+189,This debate often framed in terms of a millond pulsar or annihilating dark matter (DM) origin for the emission awaits a conclusresolution
+190,In this work we w in on the problem using Bayesian graph convolutional neural networks
+191,In simulated data our neural network (NN) is able to reconstruct the flux of inner Galaxy emission components to on average ∼0.5% comparable to the non-Poissonian template fit (NPTF)
+192,When applied to the actual Fermi-LAT data we find that the NN estimates for the flux fractions from the background templates are consistent with the NPTF; however the GCE is almost enty attributed to smooth emission
+193,Whsuggestwe do not claim a definitresolution for the GCE as the NN tends to underestimate the flux of point-sources peaked near the 1 detection threshold
+194,Yet the technique displays robustness to a number of systematics including reconstructing injected DM diffuse mismodeling and unmodeled north-south asymmetries
+195,"So whthe NN is hinting at a smooth origin for the GCE at present with further refents we argue that Bayesian Deep Learning is well placed to resolve this DM mystery.
+"
+196,Deformable Convolutional LSTM for Human Body Emotion Recognition: People represent theotions in a myriad of ways
+197,Among the most important ones is whole body expressions which have many applications in different fields such as human-computer interaction (HCI)
+198,One of the most important challs in human emotion recognition is that people express the same feeling in various ways using their face and their body
+199,Recently many methods have tried to overcome these challs using Deep Neural Networks (DNNs)
+200,However most of these methods were based on images or on facial expressions only and did not cons deformation that may happen in the images such as scaling and rotation which can adversely affect the recognition accuracy
+201,In this work motivated by recent researches on deformable convolutions we incorporate the deformable behavior into the core of convolutional long short-term memory (ConvLSTM) to improve robustness to these deformations in the image and consequently improve its accuracy on the emotion recognition task from of arbitrary lh
+202,"We dperts on the GEMEP dataset and achieved state-of-the-art accuracy of 98.8% on the task of whole human body emotion recognition on the validation set.
+"
+203,Nonlr State-Space Generalizations of Graph Convolutional Neural Networks: Graph convolutional neural networks (GCNNs) learn compositional representations from network data by nesting lr graph convolutions into nonlrities
+204,In this work we approach GCNNs from a state-space perspectrevealing that thaph convolutional module is a minimalistic lr state-space model in which the state update matrix is thaph shift operator
+205,We show this state update may be problematic because it is nonparametric and depending on thaph spectrum it may explode or vanish
+206,Therefore the GCNN has to trade its degrees of freedom between extracting features from data and handling these instabilities
+207,To improve such trade-off we propose a novel family of nodal aggregation rules that aggregates node features within a layer in a nonlr state-space parametric fashion and allowing for a better trade-off
+208,We develop two archtures within this family insp by the recurss with and without nodal gating mechanisms
+209,The proposed solutions generalthe GCNN and provan additional handle to control the state update and learn from the data
+210,"Numerical results on source localization and authorship attribution show the superiority of the nonlr state-spacneralization models over the baselGCNN.
+"
+211,A Simple Spectral Failure Mode for Graph Convolutional Networks: We present a simplneratmodel in which spectral graph embedding for subsequent inference succeeds whereas unsuperv graph convolutional networks (GCN) fail
+212,"Thometrical insight is that the GCN is unable to look beyond the first non-informatspectral dsion.
+"
+213,A Multi-task Two-stream Spatiotemporal Convolutional Neural Network for ConvectStorm Nowcasting: Thal of convectstorm nowcasting is local prediction of severe and immt convectstorms
+214,Here we cons the convectstorm nowcasting problem from the perspectof machlearning
+215,First we use a p-wsampling method to construct spatiotemporal features for nowcasting and flexibly adjust the proportions of positand negatsamples in the training set to mitigate class-imbalance issues
+216,Second we employ a conctwo-stream convolutional neural network to extract spatial and temporal cues for nowcasting
+217,This simplifies the network structure reduces the training trequent and improves classification accuracy
+218,The two-stream network used both radar and satelldata
+219,In the resulting two-stream fused convolutional neural network some of the parameters are entered into a single-stream convolutional neural network but it can learn the features of many data
+220,Further consing the relevance of classification and regression tasks we develop a multi-task learning strategy that predicts the labels used in such tasks
+221,We integrate two-stream multi-task learning into a single convolutional neural network
+222,"G the compact archture this network is more efficient and easier to optimthan existing recurrent neural networks.
+"
+223,Triple-view Convolutional Neural Networks for COVID-19 Diagnosis with Chest X-ray: The Coronavirus Dse 2019 (COVID-19) is affecting increasingly large number of people worldwposing significant stress to the health care systems
+224,Early and accurate diagnosis of COVID-19 is critical in screening of infected patients and breaking the person-to-person transmission
+225,Chest X-ray (CXR) based computer-a diagnosis of COVID-19 using deep learning becomes a promising solution to thd
+226,However the dse and various radiographic features of COVID-19 make it challng especially when consing each CXR scan typically only generates one single image
+227,Data scarcity is another issue since collecting large-scale medical CXR data set could be difficult at present
+228,Therefore how to extract more informatand relevant features from the lim samples available becomes essential
+229,To address these issues unltraditional methods processing each CXR image from a single view this paper proposes triple-view convolutional neural networks for COVID-19 diagnosis with CXR images
+230,Specifically the proposed networks extract individual features from three views of each CXR image  the left lung view the right lung view and the overall view in three streams and then integrate them for joint diagnosis
+231,The proposed network structure respects the anatomical structure of human lungs and is well aligned with clinical diagnosis of COVID-19 in pract In addition the labeling of the views does not requexperts' domain knowl which is needed by many existing methods
+232,"The expertal results show that the proposed method achieves state-of-the-art performance especially in the more challng three class classification task and admits widnerality and high flexibility.
+"
+233,Deep multi-stations weather forecasting: explainable recurrent convolutional neural networks: Deep learning applied to weather forecasting has started gaining popularity because of the progress achieved by data-dr models
+234,The present paper compares four different deep learning archtures to perform weather prediction on daily data gathered from 18 cities across Europe and spanned over a period of 15 years
+235,The four proposed models investigate the different type of input representations ( tensorial unistream  multi-stream matr) as well as the combination of convolutional neural networks and LSTM ( cascaded  ConvLSTM)
+236,In particular we show that a model that uses a multi-stream input representation and that processes each lag individually comb with a cascaded convolution and LSTM is capable of better forecasting than the other compared models
+237,"In addition we show that visualization techniques such as occlusion analysis and score maximization can gan additional insight on the most important features and cities for predicting a particular target feature and city.
+"
+238,Processing of incomplete images by (graph) convolutional neural networks: We investigate the problem of training neural networks from incomplete images without replacing missing values
+239,For this purpose we first represent an image as a graph in which missing ps are enty ignored
+240,Thaph image representation is processed using a spatial graph convolutional network (SGCN) -- a type of graph convolutional networks which is a proper generalization of classical CNNs operating on images
+241,On one hand our approach avoids the problem of missing data imputation whon the other hand there is a natural correspondence between CNNs and SGCN
+242,"Experts confirm that our approach performs better than analogical CNNs with the imputation of missing values on typical classification and reconstruction tasks.
+"
+243,Peak Detection On Data Independent Acquisition Mass Spectrometry Data With Semisuperv Convolutional Transformers: Liquid Chromatography coupled to Mass Spectrometry (LC-MS) based methods are commonly used for high-throughput quantitatmeasurements of the proteome ( the set of all proteins in a sample at a g t
+244,Targeted LC-MS produces data in the form of a two-dsional tseries spectrum with the mass to charge ratio of analytes (m/z) on one axis and the retention tfrom the chromatography on the other
+245,The elution of a peptof interest produces highly specific patterns across multiple fragment ion traces (extracted ion chromatograms or XICs)
+246,In this paper we formulate this peak detection problem as a multivariate tseries segmentation problem and propose a novel approach based on the Transformer archture
+247,Here we augment Transformers which are capable of capturing long distance dependencies with a global view with Convolutional Neural Networks (CNNs) which can capture local context important to the task at hand in the form of Transformers with Convolutional Self-Attention
+248,We further train this model in a semisuperv manner by adapting state of the art semisuperv image classification techniques for multi-channel tseries data
+249,"Experts on a representatLC-MS dataset are benchmarked using manual annotations to showcase the encouraging performance of our method; it outperforms baselneural network archtures and is competitagainst the current state of the art in automated peak detection.
+"
+250,Dyslexia detection from EEG signals using SSA component correlation and Convolutional Neural Networks: Objectdyslexia diagnosis is not a straighforward task since it is traditionally performed by means of the intepretation of different behavioural tests
+251,Moreover these tests are only applicable to readers
+252,This way early diagnosis requ the use of specific tasks not only related to reading
+253,Thus the use of Electroencephalography (EEG) constitutes an alternatfor an objectand early diagnosis that can be used with pre-readers
+254,In this way the extraction of relevant features in EEG signals results crucial for classification
+255,However the tification of the most relevant features is not straighforward and predef statistics in the tor frequency domain are not always discriminant enough
+256,On the other hand classical processing of EEG signals based on extracting EEG bands frequency descriptors usually make some assumptions on the raw signals that could cause indormation loosing
+257,In this work we propose an alternatfor analysis in the frequency domain based on Singluar Spectrum Analysis (SSA) to split the raw signal into components representing different oscillatory modes
+258,"Moreover correlation matr obta for each component among EEG channels are classfied using a Convolutional Neural network.
+"
+259,TinyRadarNN: Combining Spatial and Temporal Convolutional Neural Networks for Embedded Gesture Recognition with Short Range Radars: This work proposes a low-power high-accuracy embedded hand-gesture recognition algorithm targeting battery-operated wearable dev using low power short-range RADAR sensors
+260,A 2D Convolutional Neural Network (CNN) using range frequency Doppler features is comb with a Temporal Convolutional Neural Network (TCN) for tsequence prediction
+261,The final algorithm has a model sof only 46 thousand parameters yielding a memory footprint of only 92 KB
+262,Two datasets containing 11 challng hand gestures performed by 26 different people have been recorded containing a total of 20210 gesture instances
+263,On the 11 hand gesture dataset accuracies of 86.6\% (26 users) and 92.4\% (single user) have been achieved which are comparable to the state-of-the-art which achieves 87\% (10 users) and 94\% (single user) whusing a TCN-based network that is 7500x smaller than the state-of-the-art
+264,Furthermore thsture recognition classifier has been implemented on a Parallel Ultra-Low Power Processor demonstrating that real-tprediction is feasible with only 21 mW of power consumption for the full TCN sequence prediction network wha system-level power consumption of less than 100 mW is achieved
+265,"We provopen-source access to all the code and data collected and used in this work on tinyradar.ethz.ch.
+"
+266,Audio Cover Song Identification using Convolutional Neural Network: In this paper we propose a new approach to cover song tification using a CNN (convolutional neural network)
+267,Most previous studies extract the feature vectors that characterthe cover song relation from a pair of songs and used it to compute the (dis)similarity between the two songs
+268,Based on the observation that there is a meaningful pattern between cover songs and that this can be learned we have reformulated the cover song tification problem in a machlearning framework
+269,To do this we first build the CNN using as an input a cross-similarity matrix generated from a pair of songs
+270,We then construct the data set composed of cover song pairs and non-cover song pairs which are used as positand negattraining samples respecty
+271,The tra CNN outputs the probability of being in the cover song relation g a cross-similarity matrix generated from any two pieces of music and tifies the cover song by ranking on the probability
+272,"Expertal results show that the proposed algorithm achieves performance better than or comparable to the state-of-the-art.
+"
+273,V-based Facial Expression Recognition using Graph Convolutional Networks: Facial expression recognition (FER) aiming to classify the expression present in the facial image or v has attracted a lot of research interests in the field of artificial intellce and multia
+274,In terms of v based FER task it is sensible to capture the dynampression variation among the frames to recognfacial expression
+275,However existing methods dtly utilCNN-RNN or 3D CNN to extract the spatial-temporal features from different facial units instead of concentrating on a certain region during expression variation capturing which leads to lim performance in FER
+276,In our paper we introduce a Graph Convolutional Network (GCN) layer into a common CNN-RNN based model for v-based FER
+277,First the GCN layer is util to learn more significant facial expression features which concentrate on certain regions after sharing information between extracted CNN features of nodes
+278,Then a LSTM layer is applied to learn long-term dependencies among the GCN learned features to model the variation
+279,In addition a wt assignment mechanism is also designed to wt the output of different nodes for final classification by characterizing the expression intensities ch frame
+280,To the best of our knowl it is the first tto use GCN in FER task
+281,"We evaluate our method on three wy-used datasets CK+ Oulu-CASIA and MMI and also one challng wild dataset AFEW8.0 and the expertal results demonstrate that our method has superior performance to existing methods.
+"
+282,Smart Inference for Multidigit Convolutional Neural Network based Barcode Decoding: Barcodes are ubiquitous and have been used in most of critical daily activities for decades
+283,However most of traditional decoders requwell-founded barcode under a relaty standard condition
+284,Whwilder conditioned barcodes such as underexposed occluded blurry wrinkled and rotated are commonly captured in reality those traditional decoders show weakness of recognizing
+285,Several works attempted to solve those challng barcodes but many limitations still exist
+286,This work aims to solve the decoding problem using deep convolutional neural network with the possibility of running on portable dev
+287,Firstly we proposed a special modification of inference based on the feature of having checksum and test-taugmentation named as Smart Inference (SI) in prediction phase of a tra model
+288,SI consably boosts accuracy and reduces the false prediction for tra models
+289,Secondly we have created a large practical evaluation dataset of real captured 1D barcode under various challng conditions to test our methods vigorously which is publicly available for other researchers
+290,The experts' results demonstrated the SI effectess with the highest accuracy of 95.85% which outperformed many existing decoders on the evaluation set
+291,"Finally we successfully minim the best model by knowl distillation to a shallow model which is shown to have high accuracy (90.85%) with good inference speed of 34.2 ms per image on a real  dev
+"
+292,Multi-Graph Convolutional Network for Relationship-Dr Stock Movement Prediction: Stock prmovement prediction is commonly accepted as a very challng task due to the volatnature of financial markets
+293,Previous works typically predict the stock prmainly based on its own information neglecting the cross effect among involved stocks
+294,However it is well known that an individual stock pris correlated with pr of other stocks in complex ways
+295,To take the cross effect into consation we propose a deep learning framework called Multi-GCGRU which compr graph convolutional network (GCN) and gated recurrent unit (GRU) to predict stock movement
+296,Specifically we first encode multiple relationships among stocks into graphs based on financial domain knowl and utilGCN to extract the cross effect based on these pre-def graphs
+297,To further get rid of prior knowl we explore an adaptrelationship learned by data automatically
+298,The cross-correlation features produced by GCN are concatenated with historical records and then fed into GRU to model the temporal dependency of stock pr
+299,Experts on two stock indexes in China market show that our model outperforms other basel
+300,"Note that our model is rather feasible to incorporate more effectstock relationships containing expert knowl as well as learn data-dr relationship.
+"
+301,Decentralizing Feature Extraction with Quantum Convolutional Neural Network for Automatic Speech Recognition: We propose a novel decentral feature extraction approach in federated learning to address privacy-preservation issues for speech recognition
+302,It is built upon a quantum convolutional neural network (QCNN) composed of a quantum circucoder for feature extraction and a recurrent neural network (RNN) based end-to-end acoustic model (AM)
+303,To enhance model parameter protection in a decentral archture an input speech is first up-streamed to a quantum computing server to extract Mel-spectrogram and the corresponding convolutional features are encoded using a quantum circuit algorithm with random parameters
+304,The encoded features are then down-streamed to the local RNN model for the final recognition
+305,The proposed decentral framework takes advantage of the quantum learning progress to secure models and to avoid privacy leakage attacks
+306,Testing on the Google Speech Commands Dataset the proposed QCNN encoder attains a competitaccuracy of 95.12\% in a decentral model which is better than the previous archtures using central RNN models with convolutional features
+307,We also conduct an in-depth study of different quantum circucoder archtures to provinsights into designing QCNN-based feature extractors
+308,"Finally neural saliency analyses demonstrate a high correlation between the proposed QCNN features class activation maps and the input Mel-spectrogram.
+"
+309,Revisiting convolutional neural network on graphs with polynomial approximations of Laplace-Beltrami spectral filtering: This paper revisits spectral graph convolutional neural networks (graph-CNNs) g in Defferrard (2016) and develops the Laplace-Beltrami CNN (LB-CNN) by replacing thaph Laplacian with the LB operator
+310,We then defspectral filters via the LB operator on a graph
+311,We explore the feasibility of Chebyshev Laguerre and Hermpolynomials to approximate LB-based spectral filters and defan update of the LB operator for pooling in the LBCNN
+312,We employ the brain image data from Alzhe's Dse Neuroimaging Initiat(ADNI) and demonstrate the use of the proposed LB-CNN
+313,Based on the cortical thickness of the ADNI dataset we showed that the LB-CNN didn't improve classification accuracy compared to the spectral graph-CNN
+314,The three polynomials had a similar computational cost and showed comparable classification accuracy in the LB-CNN or spectral graph-CNN
+315,"Our findings suggest that even though the shapes of the three polynomials are different deep learning archture allows us to learn spectral filters such that the classification performance is not dependent on the type of the polynomials or the operators (graph Laplacian and LB operator).
+"
+316,Recurrent Neural Networks for v object detection: There is lots of scientific work about object detection in images
+317,For many applications lfor example autonomous driving the actual data on which classification has to be done are  This work compares different methods especially those which use Recurrent Neural Networks to detect objects in  We differ between feature-based methods which feed feature maps of different frames into the recurrent units box-level methods which feed bounding boxes with class probabilities into the recurrent units and methods which use flow networks
+318,"This study indicates common outcomes of the compared methods lthe benefit of including the temporal context into object detection and states conclusions and gu for v object detection networks.
+"
+319,An Overview Of 3D Object Detection: Point cloud 3D object detection has recently rece major attention and becomes an actresearch topic in 3D computer vision community
+320,However recognizing 3D objects in LiDAR (Light Detection and Ranging) is still a chall due to the complexity of point clouds
+321,Objects such as pedestrians cyclists or traffic cones are usually represented by qusparse points which makes the detection qucomplex using only point cloud
+322,In this project we propose a framework that uses both RGB and point cloud data to perform multiclass object recognition
+323,We use existing 2D detection models to localthe region of interest (ROI) on the RGB image followed by a p mapping strategy in the point cloud and finally lift the initial 2D bounding box to 3D space
+324,"We use the recently released nuScenes dataset---a large-scale dataset contains many data formats---to training and evaluate our proposed archture.
+"
+325,Class-Agnostic Segmentation Loss and Its Application to Salient Object Detection and Segmentation: In this paper we present a novel loss function called class-agnostic segmentation (CAS) loss
+326,With CAS loss the class descriptors are learned during training of the network
+327,We don't requto defthe label of a class a-priori rather the CAS loss clusters regions with similar appearance together in a weakly-superv manner
+328,Furthermore we show that the CAS loss function is sparse bounded and robust to class-imbalance
+329,We apply our CAS loss function with fully-convolutional ResNet101 and DeepLab-v3 archtures to the binary segmentation problem of salient object detection
+330,We investigate the performance against the state-of-the-art methods in two settings of low and high-fity training data on seven salient object detection datasets
+331,For low-fity training data (incorrect class label) class-agnostic segmentation loss outperforms the state-of-the-art methods on salient object detection datasets by staggering margins of around 50%
+332,For high-fity training data (correct class labels) class-agnostic segmentation models perform as good as the state-of-the-art approaches whbeating the state-of-the-art methods on most datasets
+333,"In order to show the utility of the loss function across different domains we also test on general segmentation dataset where class-agnostic segmentation loss outperforms cross-entropy based loss by huge margins on both region and  metrics.
+"
+334,Restoring NegatInformation in Few-Shot Object Detection: Few-shot learning has recently emd as a new chall in the deep learning field: unlconventional methods that train the deep neural networks (DNNs) with a large number of labeled data it asks for thneralization of DNNs on new classes with few annotated samples
+335,Recent advances in few-shot learning mainly focus on image classification whin this paper we focus on object detection
+336,The initial explorations in few-shot object detection tend to simulate a classification scenario by using the positproposals in images with respect to certain object class whdiscarding the negatproposals of that class
+337,Negat especially hard negat however are essential to the embedding space learning in few-shot object detection
+338,In this paper we restore the negatinformation in few-shot object detection by introducing a new negat and positrepresentatbased metric learning framework and a new inference scheme with negatand positrepresentat
+339,We build our work on a recent few-shot pRepMet with several new modules to encode negatinformation for both training and testing
+340,Extensexperts on ImageNet-LOC and PASCAL VOC show our method substantially improves the state-of-the-art few-shot object detection solutions
+341,"Our code is available at https://github.com/yang-yk/NP-RepMet.
+"
+342,Topic-Aware AbstractText Summarization: Automatic text summarization aims at condensing a document to a shorter version whpreserving the key information
+343,Different from extractsummarization which simply selects text fragments from the document abstractsummarization generates the summary in a word-by-word manner
+344,Most current state-of-the-art (SOTA) abstractsummarization methods are based on the Transformer-based encoder-decoder archture and focus on novel self-superv object in pre-training
+345,Whthese models well capture the contextual information among words in documents little attention has been paid to incorporating global semantics to better ftune for the downstream abstractsummarization task
+346,In this study we propose a topic-aware abstractsummarization (TAAS) framework by leveraging the underlying semantic structure of documents represented by their latent topics
+347,Specifically TAAS seamlessly incorporates a neural topic modeling into an encoder-decoder based sequencneration procedure via attention for summarization
+348,This design is able to learn and preservobal semantics of documents and thus makes summarization effectwhich has been proved by our experts on real-world datasets
+349,As compared to several cutting- baselmethods we show that TAAS outperforms BART a well-recogn SOTA model by 2% 8% and 12% regarding the F measure of ROUGE-1 ROUGE-2 and ROUGE-L respecty
+350,"TAAS also achieves comparable performance to PEGASUS and ProphetNet which is difficult to accomplish g that training PEGASUS and ProphetNet requ enormous computing capacity beyond what we used in this study.
+"
+351,Re-evaluating Evaluation in Text Summarization: Automated evaluation metrics as a stand-in for manual evaluation are an essential part of the development of text-generation tasks such as text summarization
+352,However whthe field has progressed our standard metrics have not -- for nearly 20 years ROUGE has been the standard evaluation in most summarization papers
+353,In this paper we make an attempt to re-evaluate the evaluation method for text summarization: assessing the reliability of automatic metrics using top-scoring system outputs both abstractand extracton recently popular datasets for both system-level and summary-level evaluation settings
+354,"We find that conclusions about evaluation metrics on older datasets do not necessarily hold on modern datasets and systems.
+"
+355,Enhancing ExtractText Summarization with Topic-Aware Graph Neural Networks: Text summarization aims to compress a textual document to a short summary whkeeping salient information
+356,Extractapproaches are wy used in text summarization because of their fluency and efficiency
+357,However most of existing extractmodels hardly capture inter-sentence relationships particularly in long documents
+358,They also often ignore the effect of topical information on capturing important contents
+359,To address these issues this paper proposes a graph neural network (GNN)-based extractsummarization model enabling to capture inter-sentence relationships efficiently via graph-structured document representation
+360,Moreover our model integrates a joint neural topic model (NTM) to discover latent topics which can provdocument-level features for sentence selection
+361,The expertal results demonstrate that our model not only substantially achieves state-of-the-art results on CNN/DM and NYT datasets but also consably outperforms existing approaches on scientific paper datasets consisting of much longer documents indicating its better robustness in document genres and lhs
+362,"Further discussions show that topical information can help the model preselect salient contents from an entdocument which interprets its effectess in long document summarization.
+"
+363,Pre-training for AbstractDocument Summarization by Reinstating Source Text: Abstractdocument summarization is usually modeled as a sequence-to-sequence (Seq2Seq) learning problem
+364,Unfortunately training large Seq2Seq based summarization models on lim superv summarization data is challng
+365,This paper presents three pre-training object which allow us to pre-train a Seq2Seq based abstractsummarization model on unlabeled text
+366,The main  is that g an input text artificially constructed from a document a model is pre-tra to reinstate the original document
+367,These object include sentence reordering next sentencneration and masked document generation which have close relations with the abstractdocument summarization task
+368,Experts on two benchmark summarization datasets ( CNN/DailyMail and New York T) show that all three object can improve performance upon basel
+369,"Compared to models pre-tra on large-scale data (more than 160GB) our method with only 19GB text for pre-training achieves comparable results which demonstrates its effectess.
+"
+370,What Have We Achieved on Text Summarization: Deep learning has led to significant improvement in text summarization with various methods investigated and improved ROUGE scores reported over the years
+371,However gaps still exist between summaries produced by automatic summars and human professionals
+372,Aiming to gain more understanding of summarization systems with respect to their strhs and limits on a fina syntactic and semantic level we consult the Multidsional Quality Metric(MQM) and quantify 8 major sources of errors on 10 representatsummarization models manually
+373,"Primarily we find that 1) under similar settings extractsummars are in general better than their abstractcounterparts thanks to strh in faithfulness and factual-consistency; 2) mtone techniques such as copy coverage and hybrtractabstractmethods do bring specific improvements but also demonstrate limitations; 3) pre-training techniques and in particular sequence-to-sequence pre-training are highly effectfor improving text summarization with BART giving the best results.
+"
+374,Multi-Fact Correction in AbstractText Summarization: Pre-tra neural abstractsummarization systems have dominated extractstrategies on news summarization performance at least in terms of ROUGE
+375,However system-generated abstractsummaries often face the pitfall of factual inconsistency: generating incorrect facts with respect to the source text
+376,To address this chall we propose Span-Fact a suof two factual correction models that leverages knowl learned from question answering models to make corrections in system-generated summaries via span selection
+377,Our models employ single or multi-masking strategies to either aty or auto-regressy replace entities in order to ensure semantic consistency w.r.t
+378,the source text whretaining the syntactic structure of summaries generated by abstractsummarization models
+379,"Experts show that our models significantly boost the factual consistency of system-generated summaries without sacrificing summary quality in terms of both automatic metrics and human evaluation.
+"
+380,Neural AbstractText Summarization with Sequence-to-Sequence Models: In the past few years neural abstracttext summarization with sequence-to-sequence (seq2seq) models hav a lot of popularity
+381,Many interesting techniques have been proposed to improve seq2seq models making them capable of handling different challs such as saliency fluency and human readability and generate high-quality summaries
+382,Generally speaking most of these techniques differ in one of these three categories: network structure parameter inference and decoding/generation
+383,There are also other concerns such as efficiency and parallelism for training a model
+384,In this paper we prova comprehenslature survey on different seq2seq models for abstracttext summarization from the viewpoint of network structures training strategies and summary generation algorithms
+385,Several models were first proposed for language modeling and generation tasks such as machtranslation and later applied to abstracttext summarization
+386,Hence we also prova brief review of these models
+387,As part of this survey we also develop an open source library namely Neural AbstractText Summar (NATS) toolkit for the abstracttext summarization
+388,An extensset of experts have been conducted on the wy used CNN/Daily Mail dataset to examthe effectess of several different neural network components
+389,"Finally we benchmark two models implemented in NATS on the two recently released datasets namely Newsroom and Bytecup.
+"
+390,Noisy Self-Knowl Distillation for Text Summarization: In this paper we apply self-knowl distillation to text summarization which we argue can alleviate problems with maximum-lihood training on single reference and noisy datasets
+391,Instead of relying on one-hot annotation labels our student summarization model is tra with guidance from a teacher which generates smoothed labels to help regulartraining
+392,Furthermore to better model uncertainty during training we introduce multiple nosignals for both teacher and student models
+393,"We demonstrate expertally on three benchmarks that our framework boosts the performance of both pretra and non-pretra summars achieving state-of-the-art results.
+"
+394,SEAL: Segment-wExtractAbstractLong-form Text Summarization: Most prior work in the sequence-to-sequence paradigm focused on datasets with input sequence lhs in the hundreds of tokens due to the computational constraints of common RNN and Transformer archtures
+395,In this paper we study long-form abstracttext summarization a sequence-to-sequence setting with input sequence lhs up to 100000 tokens and output sequence lhs up to 768 tokens
+396,We propose SEAL a Transformer-based model featuring a new encoder-decoder attention that dynamically extracts/selects input snippets to sparsely attend to for each output segment
+397,Using only the original documents and summaries we derproxy labels that provweak supervision for extractlayers simultaneously with regular supervision from abstractsummaries
+398,The SEAL model achieves state-of-the-art results on existing long-form summarization tasks and outperforms strong baselmodels on a new dataset/task we introduce Search2Wiki with much longer input text
+399,"Since content selection plicit in the SEAL model a desirable seffect is that the selection can be inspected for enhanced interpretability.
+"
+400,Automatic Text Summarization of COVID-19 Medical Research Articles using BERT and GPT-2: With the COVID-19 pandemic there is a growing urgency for medical community to keep up with the accelerating growth in the new coronavirus-related lature
+401,As a result the COVID-19 Open Research Dataset Chall has released a corpus of scholarly articles and is calling for machlearning approaches to help bridging thp between the researchers and the rapidly growing publications
+402,Here we take advantage of the recent advances in pre-tra NLP models BERT and OpenAI GPT-2 to solve this chall by performing text summarization on this dataset
+403,We evaluate the results using ROUGE scores and visual inspection
+404,Our model prov abstractand comprehensinformation based on keywords extracted from the original articles
+405,"Our work can help the the medical community by providing succinct summaries of articles for which the abstract are not already available.
+"
+406,Discourse-Aware Neural ExtractText Summarization: Recently BERT has been adopted for document encoding in state-of-the-art text summarization models
+407,However sentence-based extractmodels often result in redundant or uninformatphrases in the extracted summaries
+408,Also long-range dependencies throughout a document are not well captured by BERT which is pre-tra on sentence pairs instead of documents
+409,To address these issues we present a discourse-aware neural summarization model - DiscoBert
+410,DiscoBert extracts sub-sentential discourse units (instead of sentences) as candidates for extractselection on a f granularity
+411,To capture the long-range dependencies among discourse units structural discoursaphs are constructed based on RST trees and coreference mentions encoded with Graph Convolutional Networks
+412,"Experts show that the proposed model outperforms state-of-the-art methods by a significant margin on popular summarization benchmarks compared to other BERT-base models.
+"
+413,ExtractSummarization as Text Matching: This paper creates a paradigm shift with regard to the way we build neural extractsummarization systems
+414,Instead of following the commonly used framework of extracting sentences individually and modeling the relationship between sentences we formulate the extractsummarization task as a semantic text matching problem in which a source document and candidate summaries will be (extracted from the original text) matched in a semantic space
+415,Notably this paradigm shift to semantic matching framework is well-grounded in our comprehensanalysis of the inherent gap between sentence-level and summary-level extractors based on the property of the dataset
+416,Bes even instantiating the framework with a simple form of a matching model we have dr the state-of-the-art extractresult on CNN/DailyMail to a new level (44.41 in ROUGE-1)
+417,Experts on the other fdatasets also show the effectess of the matching framework
+418,We believe the power of this matching-based summarization framework has not been fully explo
+419,"To encourage more instantiations in the future we have released our codes processed dataset as well as generated summaries in https://github.com/maszhongming/MatchSum.
+"
+420,Salience Estimation with Multi-Attention Learning for AbstractText Summarization: Attention mechanism plays a dominant role in the sequencneration models and has been used to improve the performance of machtranslation and abstracttext summarization
+421,Different from neural machtranslation in the task of text summarization salience estimation for words phrases or sentences is a critical component since the output summary is a distillation of the input text
+422,Although the typical attention mechanism can conduct text fragment selection from the input text conditioned on the decoder states there is still a gap to conduct dt and effectsalience detection
+423,To bring back dt salience estimation for summarization with neural networks we propose a Multi-Attention Learning framework which contains two new attention learning components for salience estimation: superv attention learning and unsuperv attention learning
+424,We regard the attention wts as the salience information which means that the semantic units with large attention value will be more important
+425,The context information obta based on the estimated salience is incorporated with the typical attention mechanism in the decoder to conduct summary generation
+426,"Extensexperts on some benchmark datasets in different languages demonstrate the effectess of the proposed framework for the task of abstractsummarization.
+"
+427,Amharic AbstractText Summarization: Text Summarization is the task of condensing long text into just a handful of sentences
+428,Many approaches have been proposed for this task some of the very first were building statistical models (ExtractMethods) capable of selecting important words and copying them to the output however these models lacked the ability to paraphrase sentences as they simply select important words without actually understanding their contexts nor understanding their meaning here comes the use of Deep Learning based archtures (AbstractMethods) which effecty tries to understand the meaning of sentences to build meaningful summaries
+429,In this work we discuss one of these new novel approaches which comb curriculum learning with Deep Learning this model is called Scheduled Sampling
+430,"We apply this work to one of the most wy spoken African languages which is the Amharic Language as we try to enrich the African NLP community with top-notch Deep Learning archtures.
+"
+431,Clinical Text Summarization with Syntax-Based Negation and Semantic Concept Identification: In the era of clinical information explosion a good strategy for clinical text summarization is helpful to improve the clinical workflow
+432,The l summarization strategy can preserve important information in the informatbut less organ ill-structured clinical narrattexts
+433,Instead of using pure statistical learning approaches which are difficult to interpret and explain we util knowl of computational linguistics with human experts-curated biomedical knowl base to achieve the interpretable and meaningful clinical text summarization
+434,Our research objectis to use the biomedical ontology with semantic information and take the advantage from the language hierarchical structure the constituency tree in order to tify the correct clinical concepts and the corresponding negation information which is critical for summarizing clinical concepts from narrattext
+435,"We achieved the clinically acceptable performance for both negation detection and concept tification and the clinical concepts with common negated patterns can be tified and negated by the proposed method.
+"
+436,Improving AbstractText Summarization with History Aggregation: Recent neural sequence to sequence models have prov feasible solutions for abstractsummarization
+437,However such models are still hard to tackle long text dependency in the summarization task
+438,A high-quality summarization system usually depends on strong encoder which can refimportant information from long input texts so that the decoder can generate salient summaries from the encoder's memory
+439,In this paper we propose an aggregation mechanism based on the Transformer model to address the chall of long text representation
+440,Our model can review history information to make encoder hold more memory capacity
+441,"Empirically we apply our aggregation mechanism to the Transformer model and expert on CNN/DailyMail dataset to achieve higher quality summaries compared to several strong baselmodels on the ROUGE metrics.
+"
+442,Neural AbstractText Summarization and Fake News Detection: In this work we study abstracttext summarization by exploring different models such as LSTM-encoder-decoder with attention pointer-generator networks coverage mechanisms and transformers
+443,Upon extensand careful hyperparameter tuning we compare the proposed archtures against each other for the abstracttext summarization task
+444,Finally as an extension of our work we apply our text summarization model as a feature extractor for a fake news detection task where the news articles prior to classification will be summar and the results are compared against the classification using only the original news text
+445,"keywords: LSTM encoder-deconder abstracttext summarization pointer-generator coverage mechanism transformers fake news detection
+"
+446,Towards automattracttext summarization of A-133 Single Audit reports with machlearning: The rapid growth of text data has motivated the development of machlearning based automatic text summarization strategies that concy capture the essential s in a larger text
+447,This study a to devan extractsummarization method for A-133 Single Audits which assess if recipients of federal grants are compliant with program requents for use of federal funding
+448,Currently these voluminous audits must be manually analyzed by officials for oversight risk management and prioritization purposes
+449,Automated summarization has the potential to streamlthese processes
+450,"Analysis focused on the ""Findings"" section of ~20000 Single Audits spanning 2016-2018"
+451,Following text preprocessing and GloVe embedding sentence-level k-means clustering was performed to partition sentences by topic and to establish the importance of each sentence
+452,For each audit key summary sentences were extracted by proximity to cluster centroids
+453,Summaries were judged by non-expert human evaluation and compared to human-generated summaries using the ROUGE metric
+454,Though thal was to fully automate summarization of A-133 audits human input was requ at various stages due to large variability in audit writing style content and context
+455,Examples of human inputs include the number of clusters the choto keep or discard certain clusters based on their content relevance and the definition of a top sentence
+456,Overall this approach made progress towards automated extractsummaries of A-133 audits with future work to focus on full automation and improving summary consistency
+457,"This work highlights the inherent difficulty and subjectnature of automated summarization in a real-world application.
+"
+458,Knowl-gu Unsuperv Rhetorical Parsing for Text Summarization: Automatic text summarization (ATS) has recently achieved impressperformance thanks to recent advances in deep learning and the availability of large-scale corpora
+459,To make the summarization results more faithful this paper presents an unsuperv approach that comb rhetorical structure theory deep neural model and domain knowl concern for ATS
+460,This archture mainly contains three components: domain knowl base construction based on representation learning attentional encoder-decoder model for rhetorical parsing and subroutbased model for text summarization
+461,Domain knowl can be effecty used for unsuperv rhetorical parsing thus rhetorical structure trees for each document can be der
+462,In the unsuperv rhetorical parsing module the  of translation was adopted to alleviate the problem of data scarcity
+463,The subroutbased summarization model purely depends on the der rhetorical structure trees and can generate content-balanced results
+464,To evaluate the summary results without golden standard we proposed an unsuperv evaluation metric whose hyper-parameters were tuned by superv learning
+465,"Expertal results show that on a large-scale Che dataset our proposed approach can obtain comparable performances compared with existing methods.
+"
+466,SummAE: Zero-Shot AbstractText Summarization using Lh-Agnostic Auto-Encoders: We propose an end-to-end neural model for zero-shot abstracttext summarization of paragraphs and introduce a benchmark task ROCSumm based on ROCStories a subset for which we collected human summaries
+467,In this task fsentence stories (paragraphs) are summar with one sentence using human summaries only for evaluation
+468,We show results for extractand human basel to demonstrate a large abstractivp in performance
+469,Our model SummAE consists of a denoising auto-encoder that embeds sentences and paragraphs in a common space from which either can be decoded
+470,Summaries for paragraphs arnerated by decoding a sentence from the paragraph representations
+471,We find that traditional sequence-to-sequence auto-encoders fail to producod summaries and descrhow specific archtural cho and pre-training techniques can significantly improve performance outperforming extractbasel
+472,"The data training evaluation code and best model wts are open-sourced.
+"
+473,Efficiency Metrics for Data-Dr Models: A Text Summarization Case Study: Using data-dr models for solving text summarization or similar tasks has become very common in the last years
+474,Yet most of the studies report basic accuracy scores only and nothing is known about the ability of the proposed models to improve when tra on more data
+475,In this paper we defand propose three data efficiency metrics: data score efficiency data tdeficiency and overall data efficiency
+476,We also propose a simple scheme that uses those metrics and apply it for a more comprehensevaluation of popular methods on text summarization and titlneration tasks
+477,For the latter task we process and release a huge collection of 35 million abstract-title pairs from scientific articles
+478,"Our results reveal that among the tested models the Transformer is the most efficient on both tasks.
+"
+479,Text Summarization with Pretra Encoders: Bidtional Encoder Representations from Transformers (BERT) represents the latest incarnation of pretra language models which have recently advanced a wrange of natural language processing tasks
+480,In this paper we showcase how BERT can be usefully applied in text summarization and propose a general framework for both extractand abstractmodels
+481,We introduce a novel document-level encoder based on BERT which is able to express the semantics of a document and obtain representations for its sentences
+482,Our extractmodel is built on top of thcoder by stacking several inter-sentence Transformer layers
+483,For abstractsummarization we propose a new ftuning schedule which adopts different optims for the encoder and the decoder as a means of alleviating the mismatch between the two (the former is pretra whthe latter is not)
+484,We also demonstrate that a two-staged ftuning approach can further boost the quality of thnerated summaries
+485,Experts on three datasets show that our model achieves state-of-the-art results across the board in both extractand abstractsettings
+486,"Our code is available at https://github.com/nlpyang/PreSumm
+"
+487,Attributed Rhetorical Structure Grammar for Domain Text Summarization: This paper presents a new approach of automatic text summarization which comb domain oriented text analysis (DoTA) and rhetorical structure theory (RST) in a grammar form: the attributed rhetorical structurammar (ARSG) where the non-terminal symbols are domain keywords called domain relations whthe rhetorical relations serve as attributes
+488,We developed machlearning algorithms for learning such a grammar from a corpus of sample domain texts as well as parsing algorithms for the learned grammar together with adjustable text summarization algorithms for generating domain specific summaries
+489,Our practical experts have shown that with support of domain knowl the drawback of missing very large training data set can be effecty compensated
+490,We have also shown that the knowl based approach may be made more powerful by introducing grammar parsing and RST as inference ne
+491,For checking the feasibility of model transfer we introduced a technique for mapping a grammar from one domain to others with acceptable cost
+492,"We have also made a comprehenscomparison of our approach with some others.
+"
+493,Exploring Domain Shift in ExtractText Summarization: Although domain shift has been well explored in many NLP applications it still has rece little attention in the domain of extracttext summarization
+494,As a result the model is under-utilizing the nature of the training data due to ignoring the difference in the distribution of training sets and shows poor generalization on the unseen domain
+495,With the above limitation in mind in this paper we first extend the conventional definition of the domain from categories into data sources for the text summarization task
+496,Then we re-purpose a multi-domain summarization dataset and verify how thp between different domains influences the performance of neural summarization models
+497,Furthermore we investigate four learning strategies and examtheir abilities to deal with the domain shift problem
+498,Expertal results on three different settings show their different characteristics in our new testbed
+499,"Our source code including \textit{BERT-based} \textit{meta-learning} methods for multi-domain summarization learning and the re-purposed dataset \textsc{Multi-SUM} will be available on our project: \url{http://pfliu.com/TransferSum/}.
+"
+500,Automatic Text Summarization of Legal Cases: A Hybrid Approach: Manual Summarization of large bodies of text involves a lot of human effort and tespecially in the legal domain
+501,Lawyers spend a lot of tpreparing legal briefs of their clients' case f
+502,Automatic Text summarization is a constantly evolving field of Natural Language Processing(NLP) which is a subdisciplof the Artificial Intellce Field
+503,In this paper a hybrid method for automatic text summarization of legal cases using k-means clustering technique and tf-idf(term frequency-inverse document frequency) word vector is proposed
+504,The summary generated by the proposed method is compared using ROGUE evaluation parameters with the case summary as prepared by the lawyer for appeal in court
+505,"Further suggestions for improving the proposed method are also presented.
+"
+506,Neural Text Summarization: A Critical Evaluation: Text summarization aims at compressing long documents into a shorter form that conveys the most important parts of the original document
+507,Despincreased interest in the community and notable research effort progress on benchmark datasets has stagnated
+508,"We critically evaluate key ingredients of the current research setup: datasets evaluation metrics and models and highlight three primary shortcomings: 1) automatically collected datasets leave the task underconstra and may contain nodetrtal to training and evaluation 2) current evaluation protocol is weakly correlated with human judgment and does not account for important characteristics such as factual correctness 3) models overfit to layout biases of current datasets and offer lim dsity in their outputs.
+"
+509,MedMNIST Classification Decathlon: A Lightwt AutoML Benchmark for Medical Image Analysis: We present MedMNIST a collection of 10 pre-processed medical open datasets
+510,MedMNIST is standard to perform classification tasks on lightwt 28x28 images which requ no background knowl
+511,Covering the primary data modalities in medical image analysis it is dse on data scale (from 100 to 100000) and tasks (binary/multi-class ordinal regression and multi-label)
+512,MedMNIST could be used for educational purpose rapid prototyping multi-modal machlearning or AutoML in medical image analysis
+513,Moreover MedMNIST Classification Decathlon is designed to benchmark AutoML algorithms on all 10 datasets; We have compared several baselmethods including open-source or commercial AutoML tools
+514,"The datasets evaluation code and baselmethods for MedMNIST are publicly available at https://medmnist.github.io/.
+"
+515,DEAL: Deep Evtial ActLearning for Image Classification: Convolutional Neural Networks (CNNs) have proven to be state-of-the-art models for superv computer vision tasks such as image classification
+516,However large labeled data sets arnerally needed for the training and validation of such models
+517,In many domains unlabeled data is available but labeling pensfor instance when specifpert knowl is requ
+518,ActLearning (AL) is one approach to mitigate the problem of lim labeled data
+519,Through selecting the most informatand representatdata instances for labeling AL can contribute to more efficient learning of the model
+520,Recent AL methods for CNNs propose different solutions for the selection of instances to be labeled
+521,However they do not perform consistently well and are often computationally expens In this paper we propose a novel AL algorithm that efficiently learns from unlabeled data by capturing high prediction uncertainty
+522,By replacing the softmax standard output of a CNN with the parameters of a Dirichlet density the model learns to tify data instances that contribute efficiently to improving model performance during training
+523,We demonstrate in several experts with publicly available data that our method consistently outperforms other state-of-the-art AL approaches
+524,It can be easily implemented and does not requextenscomputational resources for training
+525,"Additionally we are able to show the benefits of the approach on a real-world medical use case in the field of automated detection of visual signals for pneumonia on chest radiographs.
+"
+526,Trading via Image Classification: The art of systematic financial trading evolved with an array of approaches ranging from simple strategies to complex algorithms all relying primary on aspects of tseries analysis
+527,Recently after visiting the trading floor of a leading financial institution we not that traders always execute their trade orders whobserving images of financial tseries on their screens
+528,In this work we built upon the success in image recognition and examthe value in transforming the traditional tseries analysis to that of image classification
+529,We create a large sample of financial tseries images encoded as candlestick (Box and Whisker) charts and label the samples following three algebraically-def binary trade strategies
+530,Using the images we train over a dozen machlearning classification models and find that the algorithms are very efficient in recovering the complicated multiscale label-generating rules when the data is represented visually
+531,"We suggest that the transformation of continuous numeric tseries classification problem to a vision problem is useful for recovering signals typical of technical analysis.
+"
+532,Structural Prior Dr Regular Deep Learning for Sonar Image Classification: Deep learning has been recently shown to improve performance in the domain of synthetic aperture sonar (SAS) image classification
+533,G the constant resolution with range of a SAS it is no surprthat deep learning techniques perform so well
+534,Despdeep learning's recent success there are still compelling open challs in reducing the high false alarm rate and enabling success when training imagery is lim which is a practical chall that distinguishes the SAS classification problem from standard image classification set-ups where training imagery may be abundant
+535,We address these challs by exploiting prior knowl that humans use to grasp the scene
+536,These include unconscious elimination of the image speckle and localization of objects in the scene
+537,We introduce a new deep learning archture which incorporates these priors with thal of improving automatic target recognition (ATR) from SAS imagery
+538,Our proposal -- called SPDRDL Structural Prior Dr Regular Deep Learning -- incorporates the previously mentioned priors in a multi-task convolutional neural network (CNN) and requ no additional training data when compared to traditional SAS ATR methods
+539,Two structural priors are enforced via regularization terms in the learning of the network: (1) structural similarity prior -- enhanced imagery (often through despeckling) aids human interpretation and is semantically similar to the original imagery and (2) structural scene context priors -- learned features lly encapsulate target centering information; hence learning may be enhanced via a regularization that encourages fity against known ground truth target shifts (relattarget position from scene center)
+540,"Experts on a challng real-world dataset reveal that SPDRDL outperforms state-of-the-art deep learning and other competing methods for SAS image classification.
+"
+541,Fusion of Dual Spatial Information for Hyperspectral Image Classification: The inclusion of spatial information into spectral classifiers for fresolution hyperspectral imagery has led to significant improvements in terms of classification performance
+542,The task of spectral-spatial hyperspectral image classification has rema challng because of high intraclass spectrum variability and low interclass spectral variability
+543,This fact has made the extraction of spatial information highly act In this work a novel hyperspectral image classification framework using the fusion of dual spatial information is proposed in which the dual spatial information is built by both exploiting pre-processing feature extraction and post-processing spatial optimization
+544,In the feature extraction stage an adapttexture smoothing method is proposed to construct the structural prof(SP) which makes it possible to precy extract discriminatfeatures from hyperspectral images
+545,The SP extraction method is used here for the first tin the remote sensing community
+546,Then the extracted SP is fed into a spectral classifier
+547,In the spatial optimization stage a p-level classifier is used to obtain the class probability followed by an extended random walker-based spatial optimization technique
+548,Finally a decision fusion rule is util to fuse the class probabilities obta by the two different stages
+549,Experts performed on three data sets from different scenes illustrate that the proposed method can outperform other state-of-the-art classification techniques
+550,"In addition the proposed feature extraction method  SP can effecty improve the discrimination between different land covers.
+"
+551,Effecttraining of deep convolutional neural networks for hyperspectral image classification through artificial labeling: Hyperspectral imaging is a rich source of data allowing for multitude of effectapplications
+552,However such imaging remains challng because of large data dsion and typically small pool of available training examples
+553,Whdeep learning approaches have been shown to be successful in providing effectclassification solutions especially for high dsional problems unfortunately they work best with a lot of labelled examples available
+554,To alleviate the second requent for a particular dataset the transfer learning approach can be used: first the network is pre-tra on some dataset with large amount of training labels available then the actual dataset is used to ftune the network
+555,This strategy is not straightforward to apply with hyperspectral images as it is often the case that only one particular image of some type or characteristic is available
+556,In this paper we propose and investigate a simple and effectstrategy of transfer learning that uses unsuperv pre-training step without label information
+557,This approach can be applied to many of the hyperspectral classification problems
+558,Performed experts show that it is very effectat improving the classification accuracy without being restricted to a particular image type or neural network archture
+559,The experts were carried out on several deep neural network archtures and various s of labeled training sets
+560,Theatest improvement in overall accuracy on the Indian P and Pavia Unsity datasets is over 21 and 13 percentage points respecty
+561,"An additional advantage of the proposed approach is the unsuperv nature of the pre-training step which can be done immediately after image acquisition without the need of the potentially costly expert's t
+"
+562,Deep Low-Shot Learning for Biological Image Classification and Visualization from Lim Training Samples: Predictmodeling is useful but very challng in biological image analysis due to the high cost of obtaining and labeling training data
+563,For example in the study of gene interaction and regulation in Drosophila embryogenesis the analysis is most biologically meaningful when in situ hybridization (ISH) gene expression pattern images from the same developmental stage are compared
+564,However labeling training data with precstages is very tconsuming even for evelopmental biologists
+565,Thus a critical chall is how to build accurate computational models for precdevelopmental stage classification from lim training samples
+566,In addition tification and visualization of developmental landmarks are requ to enable biologists to interpret prediction results and calibrate models
+567,To address these challs we propose a deep two-step low-shot learning framework to accurately classify ISH images using lim training images
+568,Specifically to enable accurate model training on lim training samples we formulate the task as a deep low-shot learning problem and develop a novel two-step learning approach including data-level learning and feature-level learning
+569,We use a deep residual network as our base model and achieve improved performance in the precstage prediction task of ISH images
+570,Furthermore the deep model can be interpreted by computing saliency maps which consist of p-wcontributions of an image to its prediction result
+571,In our task saliency maps are used to assist the tification and visualization of developmental landmarks
+572,Our expertal results show that the proposed model can not only make accurate predictions but also yield biologically meaningful interpretations
+573,"We anticipate our methods to be easily generalizable to other biological image classification tasks with small training datasets.
+"
+574,Performance evaluation and application of computation based low-cost homogeneous machlearning model algorithm for image classification: The image classification machlearning model was tra with the intention to predict the category of the input image
+575,Whmultiple state-of-the-art ensemble model methodologies are openly available this paper evaluates the performance of a low-cost simple algorithm that would integrate seamlessly into modern production-grade cloud-based applications
+576,The homogeneous models tra with the full instead of subsets of data contains varying hyper-parameters and neural layers from one another
+577,These models' inferences will be processed by the new algorithm which is loosely based on conditional probability theories
+578,"The final output will be evaluated.
+"
+579,Lepthwet: An Extreme Lightwt Network for Hyperspectral Image Classification: Deep learning methods have shown consable potential for hyperspectral image (HSI) classification which can achieve high accuracy compared with traditional methods
+580,However they often need a large number of training samples and have a lot of parameters and high computational overhead
+581,To solve these problems this paper proposes a new network archture Lepthwet for HSI classification
+582,Based on 3D depthwconvolution Lepthwet can decompose standard convolution into depthwconvolution and pointwconvolution which can achieve high classification performance with minimal parameters
+583,Moreover we remove the ReLU layer and Batch Normalization layer in the original 3D depthwconvolution which significantly improves the overfitting phenomenon of the model on small s datasets
+584,In addition focal loss is used as the loss function to improve the model's attention on difficult samples and unbalanced data and its training performance is significantly better than that of cross-entropy loss or balanced cross-entropy loss
+585,"Expert results on three benchmark hyperspectral datasets show that Lepthwet achieves state-of-the-art performance with a very small number of parameters and low computational cost.
+"
+586,SatellImage Classification with Deep Learning: Satellimagery is important for many applications including disaster response law enforcement and environmental monitoring
+587,These applications requthe manual tification of objects and facilities in the imagery
+588,Because thographpanses to be covered areat and the analysts available to conduct the searches are few automation is requ
+589,Yet traditional object detection and classification algorithms are too inaccurate and unreliable to solve the problem
+590,Deep learning is a family of machlearning algorithms that have shown promfor the automation of such tasks
+591,It has achieved success in image understanding by means of convolutional neural networks
+592,In this paper we apply them to the problem of object and facility recognition in high-resolution multi-spectral satellimagery
+593,We descra deep learning system for classifying objects and facilities from the IARPA Functional Map of the World (fMoW) dataset into 63 different classes
+594,The system consists of an ensemble of convolutional neural networks and additional neural networks that integrate satellmetadata with image features
+595,It is implemented in Python using the Keras and TensorFlow deep learning libraries and runs on a Linux server with an NVIDIA Titan X graphics card
+596,At the tof writing the system is in 2nd place in the fMoW TopCoder competition
+597,"Its total accuracy is 83% the F1 score is 0.797 and it classifies 15 of the classes with accuracies of 95% or better.
+"
+598,SatellImage Classification with Deep Learning: Satellimagery is important for many applications including disaster response law enforcement and environmental monitoring
+599,These applications requthe manual tification of objects and facilities in the imagery
+600,Because thographpanses to be covered areat and the analysts available to conduct the searches are few automation is requ
+601,Yet traditional object detection and classification algorithms are too inaccurate and unreliable to solve the problem
+602,Deep learning is a family of machlearning algorithms that have shown promfor the automation of such tasks
+603,It has achieved success in image understanding by means of convolutional neural networks
+604,In this paper we apply them to the problem of object and facility recognition in high-resolution multi-spectral satellimagery
+605,We descra deep learning system for classifying objects and facilities from the IARPA Functional Map of the World (fMoW) dataset into 63 different classes
+606,The system consists of an ensemble of convolutional neural networks and additional neural networks that integrate satellmetadata with image features
+607,It is implemented in Python using the Keras and TensorFlow deep learning libraries and runs on a Linux server with an NVIDIA Titan X graphics card
+608,At the tof writing the system is in 2nd place in the fMoW TopCoder competition
+609,"Its total accuracy is 83% the F1 score is 0.797 and it classifies 15 of the classes with accuracies of 95% or better.
+"
+610,CC-Loss: Channel Correlation Loss For Image Classification: The loss function is a key component in deep learning models
+611,A commonly used loss function for classification is the cross entropy loss which is a simple yet effectapplication of information theory for classification problems
+612,Based on this loss many other loss functions have been proposed~\emph{} by adding intra-class and inter-class constraints to enhance the discriminatability of the learned features
+613,However these loss functions fail to cons the connections between the feature distribution and the model structure
+614,Aiming at addressing this problem we propose a channel correlation loss (CC-Loss) that is able to constrain the specific relations between classes and channels as well as maintain the intra-class and the inter-class separability
+615,CC-Loss uses a channel attention module to generate channel attention of features for each sample in the training stage
+616,Next an Eucln distance matrix is calculated to make the channel attention vectors associated with the same class become tical and to increase the difference between different classes
+617,"Finally we obtain a feature embedding with good intra-class compactness and inter-class separability.Expertal results show that two different backbone models tra with the proposed CC-Loss outperform the state-of-the-art loss functions on three image classification datasets.
+"
+618,Bounding Boxes Are All We Need: Street View Image Classification via Context Encoding of Detected Buildings: Street view images classification aiming at urban land use analysis is difficult because the class labels ( commercial area) are concepts with higher abstract level compared to the ones of general visual tasks ( persons and cars)
+619,Therefore classification models using only visual features often fail to achieve satisfactory performance
+620,"In this paper a novel approach based on a ""Detector-Encoder-Classifier"" framework is proposed"
+621,Instead of using visual features of the whole image dtly as common image-level models based on convolutional neural networks (CNNs) do the proposed framework firstly obtains the bounding boxes of buildings in street view images from a detector
+622,"Their contextual information such as the co-occurrence patterns of building classes and their layout are then encoded into metadata by the proposed algorithm ""CODING"" (Context encOding of Detected buildINGs)"
+623,Finally these bounding box metadata are classified by a recurrent neural network (RNN)
+624,"In addition we made a dual-labeled dataset named ""BEAUTY"" (Building dEtection And Urban funcTional-zone portraYing) of 19070 street view images and 38857 buildings based on the existing BIC GSV [1]"
+625,The dataset can be used not only for street view image classification but also for multi-class building detection
+626,"Experts on ""BEAUTY"" show that the proposed approach achieves a 12.65% performance improvement on macro-precision and 12% on macro-recall over image-level CNN based models"
+627,"Our code and dataset are available at https://github.com/kyle-one/Context-Encoding-of-Detected-Buildings/
+"
+628,Glance and Focus: a Dynamic Approach to Reducing Spatial Redundancy in Image Classification: The accuracy of deep convolutional neural networks (CNNs) generally improves when fueled with high resolution images
+629,However this often comes at a high computational cost and high memory footprint
+630,Insp by the fact that not all regions in an image are task-relevant we propose a novel framework that performs efficient image classification by processing a sequence of relaty small inputs which are strategically selected from the original image with reinforcement learning
+631,Such a dynamic decision process naturally facilitates adaptinference at test t it can be terminated once the model is sufficiently conft about its prediction and thus avoids further redundant computation
+632,Notably our framework is general and flexible as it is compatible with most of the state-of-the-art light-wted CNNs (such as Mobets EfficientNets and RegNets) which can be conveniently deployed as the backbone feature extractor
+633,Experts on ImageNet show that our method consistently improves the computational efficiency of a wvariety of deep models
+634,For example it further reduces the average latency of the highly efficient Mobet-V3 on an iPhone XS Max by 20% without sacrificing accuracy
+635,"Code and pre-tra models are available at https://github.com/blackfeather-wang/GFNet-Pytorch.
+"
+636,Semantic v segmentation for autonomous driving: We aim to solve semantic v segmentation in autonomous driving namely road detection in real tv using techniques discussed in (Shelhamer  2016a)
+637,Whfully convolutional network g good result we show that the speed can be halved whpreserving the accuracy
+638,"The test dataset being used is KITTI which consists of real footage from Germany's streets.
+"
+639,A Centroid Loss for Weakly Superv Semantic Segmentation in Quality Control and Inspection Application: Process automation has enabled a level of accuracy and productivity that goes beyond human ability and one critical area where automation is making a huge difference is the machvision system
+640,In this paper a semantic segmentation solution is proposed for two scenes
+641,One is the inspection intended for vessel corrosion detection and the other is a detection system used to assist quality control on the surgery toolboxes prepared by the sterilization unit of a hospital
+642,In order to reduce the trequ to prepare p-level ground truth this work focuses on the use of weakly superv annotations (scribbles)
+643,Moreover our solution integrates a clustering approach into a semantic segmentation network thus reducing the negateffects caused by weakly superv annotations
+644,To evaluate the performance of our approach two datasets are collected from the real world (vessels' structure and hospital surgery toolboxes) for both training and validation
+645,"According to the result of analysis the approach proposed in this paper produce a satisfactory performance on two datasets through the use of weak annotations.
+"
+646,Multi-Attention-Network for Semantic Segmentation of High-Resolution Remote Sensing Images: Semantic segmentation of remote sensing images plays an important role in land resource management yield estimation and economic assessment
+647,Even though the semantic segmentation of remote sensing images has been promtly improved by convolutional neural networks there are still several limitations conta in standard models
+648,First for encoder-decoder archtures lU-Net the utilization of multi-scale features causes overuse of information where similar low-level features are explo at multiple scales for multiple t
+649,Second long-range dependencies of feature maps are not sufficiently explored leading to feature representations associated with each semantic class are not optimal
+650,Third despthe dot-product attention mechanism has been introduced and harnessed wy in semantic segmentation to model long-range dependencies the high tand space complexities of attention impede the usage of attention in application scenarios with large input
+651,In this paper we proposed a Multi-Attention-Network (MANet) to remedy these drawbacks which extracts contextual dependencies by multficient attention mechanisms
+652,A novel attention mechanism named kernel attention with lr complexity is proposed to alleviate the high computational demand of attention
+653,Based on kernel attention and channel attention we integrate local feature maps extracted by ResNeXt-101 with their corresponding global dependencies and adapty signalinterdependent channel maps
+654,"Experts conducted on two remote sensing image datasets captured by variant satell demonstrate that the performance of our MANet transcends the DeepLab V3+ PSPNet FastFCN and other baselalgorithms.
+"
+655,Domain Adaptation in LiDAR Semantic Segmentation: LiDAR semantic segmentation prov 3D semantic information about the environment an essential cue for intellt systems during their decision making processes
+656,Deep neural networks are achieving state-of-the-art results on large public benchmarks on this task
+657,Unfortunately finding models that generalwell or adapt to additional domains where data distribution is different remains a major chall
+658,This work addresses the problem of unsuperv domain adaptation for LiDAR semantic segmentation models
+659,Our approach comb novel s on top of the current state-of-the-art approaches and yields new state-of-the-art results
+660,We propose simple but effectstrategies to reduce the domain shift by aligning the data distribution on the input space
+661,Bes we propose a learning-based approach that aligns the distribution of the semantic classes of the target domain to the source domain
+662,The presented ablation study shows how each part contributes to the final performance
+663,"Our strategy is shown to outperform previous approaches for domain adaptation with comparisons run on three different domains.
+"
+664,Importance-Aware Semantic Segmentation in Self-Driving with Discrete Wasserstein Training: Semantic segmentation (SS) is an important perception manner for self-driving cars and robotics which classifies each p into a pre-determ class
+665,The wy-used cross entropy (CE) loss-based deep networks has achieved significant progress w.r.t
+666,the mean Intersection-over Union (mIoU)
+667,However the cross entropy loss can not take the different importance of each class in an self-driving system into account
+668,For example pedestrians in the image should be much more important than the surrounding buildings when make a decisions in the driving so their segmentation results are expected to be as accurate as possible
+669,In this paper we propose to incorporate the importance-aware inter-class correlation in a Wasserstein training framework by configuring its ground distance matrix
+670,Thound distance matrix can be pre-def following a priori in a specific task and the previous importance-ignored methods can be the particular cases
+671,From an optimization perspectwe also extend our ground metric to a lr convex or concave increasing function pre-def ground distance
+672,We evaluate our method on CamVid and Cityscapes datasets with different backbones (SegNet ENet FCN and Deeplab) in a plug and play fashion
+673,"In our extenssexperts Wasserstein loss demonstrates superior segmentation performance on the predef critical classes for safe-driving.
+"
+674,Dense Dual-Path Network for Real-tSemantic Segmentation: Semantic segmentation has achieved remarkable results with high computational cost and a large number of parameters
+675,However real-world applications requefficient inference speed on embedded dev
+676,Most previous works address the chall by reducing depth width and layer capacity of network which leads to poor performance
+677,In this paper we introduce a novel Dense Dual-Path Network (DDPNet) for real-tsemantic segmentation under resource constraints
+678,We design a light-wt and powerful backbone with dense connectivity to facilitate feature reuse throughout the whole network and the proposed Dual-Path module (DPM) to sufficiently aggregate multi-scale contexts
+679,Meanwha simple and effectframework is built with a skip archture utilizing the high-resolution feature maps to refthe segmentation output and an upsampling module leveraging context information from the feature maps to refthe heatmaps
+680,The proposed DDPNet shows an obvious advantage in balancing accuracy and speed
+681,Specifically on Cityscapes test dataset DDPNet achieves 75.3% mIoU with 52.6 FPS for an input of 1024 X 2048 resolution on a single GTX 1080Ti card
+682,"Compared with other state-of-the-art methods DDPNet achieves a significant better accuracy with a comparable speed and fewer parameters.
+"
+683,HCNet: Hierarchical Context Network for Semantic Segmentation: Global context information is vital in visual understanding problems especially in p-level semantic segmentation
+684,The mainstream methods adopt the self-attention mechanism to model global context information
+685,However ps belonging to different classes usually have weak feature correlation
+686,Modeling thobal p-level correlation matrix indiscriminately tremely redundant in the self-attention mechanism
+687,In order to solve the above problem we propose a hierarchical context network to differentially model homogeneous ps with strong correlations and heterogeneous ps with weak correlations
+688,Specifically we first propose a multi-scal pre-segmentation module to divthe entfeature map into different classed-based homogeneous regions
+689,Withch homogeneous region we design the p context module to capture p-level correlations
+690,Subsequently different from the self-attention mechanism that still models weak heterogeneous correlations in a dense p-level manner the region context module is proposed to model sparse region-level dependencies using a unified representation of each region
+691,Through aggregating fina p context features and coarsa region context features our proposed network can not only hierarchically model global context information but also harvest multi-granularity representations to more robustly tify multi-scale objects
+692,We evaluate our approach on Cityscapes and the ISPRS Vaihingen dataset
+693,"Without Bells or Whistles our approach real a mean IoU of 82.8% and overall accuracy of 91.4% on Cityscapes and ISPRS Vaihingen test set achieving state-of-the-art results.
+"
+694,PseudoSeg: Designing Pseudo Labels for Semantic Segmentation: Recent advances in semi-superv learning (SSL) demonstrate that a combination of consistency regularization and pseudo-labeling can effecty improve image classification accuracy in the low-data reg Compared to classification semantic segmentation tasks requmuch more intenslabeling costs
+695,Thus these tasks greatly benefit from data-efficient training methods
+696,However structured outputs in segmentation render particular difficulties ( designing pseudo-labeling and augmentation) to apply existing SSL strategies
+697,To address this problem we present a simple and novel re-design of pseudo-labeling to generate well-calibrated structured pseudo labels for training with unlabeled or weakly-labeled data
+698,Our proposed pseudo-labeling strategy is network structure agnostic to apply in a one-stage consistency training framework
+699,We demonstrate the effectess of the proposed pseudo-labeling strategy in both low-data and high-data reg
+700,Extensexperts have validated that pseudo labels generated from wy fusing dse sources and strong data augmentation are crucial to consistency training for segmentation
+701,"The source code is available at https://github.com/googleinterns/wss.
+"
+702,Noisy-LSTM: Improving Temporal Awareness for V Semantic Segmentation: Semantic v segmentation is a key chall for various applications
+703,This paper presents a new model named Noisy-LSTM which is trainable in an end-to-end manner with convolutional LSTMs (ConvLSTMs) to leverage the temporal coherency in v frames
+704,We also present a simple yet effecttraining strategy which replaces a frame in v sequence with no
+705,This strategy spoils the temporal coherency in v frames during training and thus makes the temporal links in ConvLSTMs unreliable which may consequently improve feature extraction from v frames as well as serve as a regular to avoid overfitting without requiring extra data annotation or computational costs
+706,"Expertal results demonstrate that the proposed model can achieve state-of-the-art performances in both the CityScapes and EndoVis2018 datasets.
+"
+707,A ComprehensAnalysis of Weakly-Superv Semantic Segmentation in Different Image Domains: Recently proposed methods for weakly-superv semantic segmentation have achieved impressperformance in predicting p classes despbeing tra with only image labels which lack positional information
+708,Because image annotations are cheaper and quicker to generate weak supervision is more practical than full supervision for training segmentation algorithms
+709,These methods have been predominantly developed to solve the background separation and partial segmentation problems presented by natural scene images and it is unclear whether they can be simply transferred to other domains with different characteristics such as histopathology and satellimages and still perform well
+710,This paper evaluates state-of-the-art weakly-superv semantic segmentation methods on natural scene histopathology and satellimage datasets and analyzes how to determwhich method is most suitable for a g dataset
+711,Our experts indicate that histopathology and satellimages present a different set of problems for weakly-superv semantic segmentation than natural scene images such as ambiguous boundaries and class co-occurrence
+712,Methods perform well for datasets they were developed on but tend to perform poorly on other datasets
+713,We present some practical techniques for these methods on unseen datasets and argue that more work is needed for a generalizable approach to weakly-superv semantic segmentation
+714,"Our full code implementation is available on GitHub: https://github.com/lyndonchan/wsss-analysis.
+"
+715,Semantic Editing On Segmentation Map Via Multi-Expansion Loss: Semantiting on segmentation map has been proposed as an intermediate interface for imagneration because it prov flexible and strong assistance in various imagneration tasks
+716,This paper aims to improve quality of ed segmentation map conditioned on semantic inputs
+717,Even though recent studies apply global and local adversarial losses extensy to generate images for higher image quality we find that they suffer from the misalignment of the boundary area in the mask area
+718,To address this we propose MExGAN for semantiting on segmentation map which uses a novel Multi-Expansion (MEx) loss implemented by adversarial losses on MEx areas
+719,Each MEx area has the mask area of thneration as the majority and the boundary of original context as the minority
+720,To boost convenience and stability of MEx loss we further propose an Approximated MEx (A-MEx) loss
+721,Bes in contrast to previous model that builds training data for semantiting on segmentation map with part of the whole image which leads to model performance degradation MExGAN applies the whole image to build the training data
+722,"Extensexperts on semantiting on segmentation map and natural image inpainting show competitresults on four datasets.
+"
+723,Auto Seg-Loss: Searching Metric Surrogates for Semantic Segmentation: We propose a general framework for searching surrogate losses for mainstream semantic segmentation metrics
+724,This is in contrast to existing loss functions manually designed for individual metrics
+725,The searched surrogate losses can generalwell to other datasets and networks
+726,Extensexperts on PASCAL VOC and Cityscapes demonstrate the effectess of our approach
+727,"Code shall be released.
+"
+728,Semi-Superv Semantic Segmentation in Earth Observation: The MiniFrance SuDataset Analysis and Multi-task Network Study: The development of semi-superv learning techniques sential to enhance thneralization capacities of machlearning algorithms
+729,Indeed raw image data are abundant whlabels are scarce therefore it is crucial to leverage unlabeled inputs to build better models
+730,The availability of large databases have been key for the development of learning algorithms with high level performance
+731,Despthe major role of machlearning in Earth Observation to derproducts such as land cover maps datasets in the field are still lther because of modest surface coverage lack of variety of scenes or restricted classes to tify
+732,We introduce a novel large-scale dataset for semi-superv semantic segmentation in Earth Observation the MiniFrance su MiniFrance has several unprecedented properties: it is large-scale containing over 2000 very high resolution aerial images accounting for more than 200 billions samples (ps); it is varied covering 16 conurbations in France with various climates different landscapes and urban as well as countrysscenes; and it is challng consing land use classes with high-level semantics
+733,Nevertheless the most distinctquality of MiniFrance is being the only dataset in the field especially designed for semi-superv learning: it contains labeled and unlabeled images in its training partition which reproduces a llscenario
+734,Along with this dataset we present tools for data representatess analysis in terms of appearance similarity and a thorough study of MiniFrance data demonstrating that it is suitable for learning and general well in a semi-superv setting
+735,"Finally we present semi-superv deep archtures based on multi-task learning and the first experts on MiniFrance.
+"
+736,Encoder-decoder semantic segmentation models for electrolumcence images of thin-film photovoltaic modules: We cons a series of image segmentation methods based on the deep neural networks in order to perform semantic segmentation of electrolumcence (EL) images of thin-film modules
+737,We utilthe encoder-decoder deep neural network archture
+738,The framework is general such that it can easily be extended to other types of images ( thermography) or solar cell technologies ( crystallsilicon modules)
+739,The networks are tra and tested on a sample of images from a database with 6000 EL images of Copper Indium Gallium Den(CIGS) thin film modules
+740,"We selected two types of features to extract shunts and so called ""droplets"""
+741,The latter feature is often observed in the set of images
+742,Several models are tested using various combinations of encoder-decoder layers and a procedure is proposed to select the best model
+743,We show exemplary results with the best selected model
+744,Furthermore we applied the best model to the full set of 6000 images and demonstrate that the automated segmentation of EL images can reveal many subtle features which cannot be inferred from studying a small sample of images
+745,"We believe these features can contribute to process optimization and quality control.
+"
+746,Robust and Consistent Estimation of Word Embedding for Bangla Language by ftuning Word2Vec Model: Word embedding or vector representation of word holds syntactical and semantic characteristics of word which can be an informatfeature for any machlearning based models of natural language processing
+747,There are several deep learning based models for the vectorization of words lword2vec fasttext gensim glove etc
+748,In this study we analysis word2vec model for learning word vectors by tuning different hyper-parameters and present the most effectword embedding for Bangla language
+749,For testing the performances of different word embeddings induced by ftuning of word2vec model we perform both intrinsic and extrinsaluations
+750,We cluster the word vectors to examthe relational similarity of words and also use different word embeddings as the feature of news article classifier for extrinsaluation
+751,"From our expert we discover that the word vectors with 300 dsion generated from 'skip-gram' method of word2vec model using the sliding window sof 4 arving the most robust vector representations for Bangla language.
+"
+752,Fair Embedding Eng A Library for Analyzing and Mitigating Gender Bias in Word Embeddings: Non-contextual word embedding models have been shown to inherit human-lstereotypical biases of gender race and religion from the training corpora
+753,To counter this issue a large body of research has emd which aims to mitigate these biases whkeeping the syntactic and semantic utility of embeddings intact
+754,This paper descr Fair Embedding Eng(FEE) a library for analysing and mitigating gender bias in word embeddings
+755,FEE comb various state of the art techniques for quantifying visualising and mitigating gender bias in word embeddings under a standard abstraction
+756,FEE will aid practitioners in fast track analysis of existing debiasing methods on thebedding models
+757,"Further it will allow rapid prototyping of new methods by evaluating their performance on a suof standard metrics.
+"
+758,All Word Embeddings from One Embedding: In neural network-based models for natural language processing (NLP) the largest part of the parameters often consists of word embeddings
+759,Conventional models prepare a large embedding matrix whose sdepends on the vocabulary s Therefore storing these models in memory and disk storage is costly
+760,In this study to reduce the total number of parameters the embeddings for all words are represented by transforming a shared embedding
+761,The proposed method ALONE (all word embeddings from one) constructs the embedding of a word by modifying the shared embedding with a filter vector which is word-specific but non-trainable
+762,Then we input the constructed embedding into a feed-forward neural network to increase its expressess
+763,Nay the filter vectors occupy the same memory sas the conventional embedding matrix which depends on the vocabulary s To solve this issue we also introduce a memory-efficient filter construction approach
+764,We indicate our ALONE can be used as word representation sufficiently through an expert on the reconstruction of pre-tra word embeddings
+765,In addition we also conduct experts on NLP application tasks: machtranslation and summarization
+766,"We comb ALONE with the current state-of-the-art encoder-decoder model the Transformer and achieved comparable scores on WMT 2014 English-to-German translation and DUC 2004 very short summarization with less parameters.
+"
+767,PBoS: Probabilistic Bag-of-Subwords for Generalizing Word Embedding: We look into the task of \emph{generalizing} word embeddings: g a set of pre-tra word vectors over a finvocabulary thal is to predict embedding vectors for out-of-vocabulary words \emph{without} extra contextual information
+768,We rely solely on the spellings of words and propose a model along with an efficient algorithm that simultaneously models subword segmentation and computes subword-based compositional word embedding
+769,We call the model probabilistic bag-of-subwords (PBoS) as it applies bag-of-subwords for all possible segmentations based on their lihood
+770,Inspections and affix prediction expert show that PBoS is able to produce meaningful subword segmentations and subword rankings without any source of explicit morphological knowl
+771,"Word similarity and POS tagging experts show clear advantages of PBoS over previous subword-level models in the quality of generated word embeddings across languages.
+"
+772,Discrete Word Embedding for Logical Natural Language Understanding: We propose an unsuperv neural model for learning a discrete embedding of words
+773,Unlexisting discrete embeddings our binary embedding supports vector arithmetic operations similar to continuous embeddings
+774,Our embedding represents each word as a set of propositional statements describing a transition rule in classical/STRIPS planning formalism
+775,"This makes the embedding dtly compatible with symbolic state of the art classical planning solvers.
+"
+776,CogniFNN: A Fuzzy Neural Network Framework for CognitWord Embedding Evaluation: Word embeddings can reflect the semantic representations and the embedding qualities can be comprehensy evaluated with human natural reading-related cognitdata sources
+777,In this paper we proposed the CogniFNN framework which is the first attempt at using fuzzy neural networks to extract non-lr and non-stationary characteristics for evaluations of English word embeddings against the corresponding cognitdatasets
+778,In our expert we used 15 human cognitdatasets across three modalities: EEG fMRI and eye-tracking and selected the mean square error and multiple hypotheses testing as metrics to evaluate our proposed CogniFNN framework
+779,Compared to the recent pioneer framework our proposed CogniFNN showed smaller prediction errors of both context-independent (GloVe) and context-sensit(BERT) word embeddings and achieved higher significant ratios with randomly generated word embeddings
+780,Our findings suggested that the CogniFNN framework could prova more accurate and comprehensevaluation of cognitword embeddings
+781,"It will potentially be beneficial to the further word embeddings evaluation on extrinsic natural language processing tasks.
+"
+782,Word embedding and neural network on grammatical gender -- A case study of Swedish: We analyze the information prov by the word embeddings about thammatical gender in Swedish
+783,We wish that this paper may serve as one of the bridges to connect the methods of computational linguistics and general linguistics
+784,Taking nominal classification in Swedish as a case study we first show how the information about grammatical gender in language can be captured by word embedding models and artificial neural networks
+785,"Then we match our results with previous linguistic hypotheses on assignment and usage of grammatical gender in Swedish and analyze the errors made by the computational model from a linguistic perspect
+"
+786,Effect of Text Processing Steps on Twitter Sentt Classification using Word Embedding: Processing of raw text is the crucial first step in text classification and sentt analysis
+787,However text processing steps are often performed using off-the-shelf rout and pre-built word dictionaries without optimizing for domain application and context
+788,This paper investigates the effect of seven text processing scenarios on a particular text domain (Twitter) and application (sentt classification)
+789,Skip gram-based word embeddings are developed to include Twitter colloquial words emojis and hashtag keywords that are often removed for being unavailable in conventional lature corpora
+790,Our experts reveal negateffects on sentt classification of two common text processing steps: 1) stop word removal and 2) averaging of word vectors to represent individual tweets
+791,New effectsteps for 1) including non-ASCII emoji characters 2) measuring word importance from word embedding 3) aggregating word vectors into a tweet embedding and 4) developing lrly separable feature space have been proposed to optimthe sentt classification p The best combination of text processing steps yields the highest average area under the curve (AUC) of 88.4 (+/-0.4) in classifying 14640 tweets with three sentt labels
+792,Word selection from context-dr word embedding reveals that only the ten most important words in Tweets cumulaty yield over 98% of the maximum accuracy
+793,Results demonstrate a means for data-dr selection of important words in tweet classification as opposed to using pre-built word dictionaries
+794,"The proposed tweet embedding is robust to and alleviates the need for several text processing steps.
+"
+795,Decomposing Word Embedding with the Capsule Network: Word sense disambiguation tries to learn the appropriate sense of an ambiguous word in a g context
+796,The existing pre-tra language methods and the methods based on multbeddings of word did not explore the power of the unsuperv word embedding sufficiently
+797,In this paper we discuss a capsule network-based approach taking advantage of capsule's potential for recognizing highly overlapping features and dealing with segmentation
+798,We propose a Capsule network-based method to Decompose the unsuperv word Embedding of an ambiguous word into context specific Sense embedding called CapsDecE2S
+799,In this approach the unsuperv ambiguous embedding is fed into capsule network to produce its multiple morpheme-lvectors which are def as the basic semantic language units of meaning
+800,With attention operations CapsDecE2S integrates the word context to reconstruct the multiple morpheme-lvectors into the context-specific sense embedding
+801,To train CapsDecE2S we propose a sense matching training method
+802,In this method we convert the sense learning into a binary classification that explicitly learns the relation between senses by the label of matching and non-matching
+803,The CapsDecE2S was expertally evaluated on two sense learning tasks  word in context and word sense disambiguation
+804,"Results on two public corpora Word-in-Context and English all-words Word Sense Disambiguation show that the CapsDecE2S model achieves the new state-of-the-art for the word in context and word sense disambiguation tasks.
+"
+805,"
+"
+806,"
+"
+807,"
+"
+808,"
+"
+809,"
+"
+810,"
+"
+811,"
+"
+812,"
+"
+813,"
+"
+814,"
+"
+815,"
+"
+816,"
+"
+817,"
+"
+818,"
+"
+819,"
+"
+820,"
+"
+821,"
+"
+822,"
+"
+823,"
+"
+824,"
+"
+825,"
+"
+826,"
+"
+827,"
+"
+828,"
+"
+829,"
+"
+830,"
+"
+831,"
+"
+832,"
+"
+833,"
+"

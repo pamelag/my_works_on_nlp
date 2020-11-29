@@ -1,0 +1,216 @@
+XLNet: Generalized Autoregressive Pretraining Language Understanding.
+modeling bidirectional contexts, denoising autoencoding pretraining BERT autoregressive language modeling.
+masks, BERT pretrain-finetune discrepancy.
+XLNet, generalized autoregressive pretraining learning bidirectional contexts BERT autoregressive formulation.
+XLNet ransformer-XL, autoregressive model, into pretraining.
+XLNet outperforms BERT question answering, natural language inference, sentiment analysis, document ranking.
+Bert transformer stack of LSTMs.
+RoBERTa: Robustly Optimized BERT. BERT.
+BERT undertrained. state-of-the-art results GLUE, RACE, SQuAD. BERT undertrained and improved training BERT models, RoBERTa, post-BERT.
+Ordered Neurons: Recurrent Neural Networks (RNN).
+Natural language hierarchically structured: Long Short Term Memory (LSTM), recurrent architecture (RNN), LSTM (ON-LSTM), language modeling, unsupervised parsing, targeted syntactic evaluation, and logical inference.
+BERT: Deep Bidirectional Transformers Language Understanding: language representation model BERT, Bidirectional Encoder Representations Transformers.
+language representation models, BERT pre-train deep bidirectional representations unlabeled text.
+pre-trained BERT model, question answering and language inference.
+BERT natural language processing tasks.
+RelationNet++: Object Detection Transformer Decoder.
+Existing object detection, RetinaNet Faster R-CNN, center points FCOS and RepPoints, CornerNet.
+classification localization, featureextraction. attentionbased decoder Transformer object detector.
+detectors. bridging visual representations (BVR). object detection, RetinaNet, Faster R-CNN, FCOS and ATSS. RelationNet++.
+Graph-based Topic Extraction Vector Embeddings Text Documents: Corpus unstructured corpora `topics' vector embeddings natural language processing graph partitioning clusters corpus.
+graph-based clustering clustering topic modelling, text vector embeddings, Bag-of-Words Doc2Vec transformers Bert.
+Peak Detection Mass Spectrometry Data Semisupervised Convolutional Transformers:
+segmentation Transformer architecture.
+Transformers, long distance dependencie, Convolutional Neural Networks (CNNs), local context, Transformers with Convolutional Self-Attention.
+semisupervised manner semisupervised image classification.
+neural network architectures automated peak detection.
+ReadOnce Transformers: Text Transformers: language models extract information. transformer, ReadOnce Transformers, information capturing text.
+texttotext ReadOnce Representations multi-hop QA, abstractive QA, and summarization. texttotext models, documents.
+Inducing Taxonomic Transformers: taxonomic trees transformers maximum spanning tree.
+WordNet Taxonomic Transformers.
+Multi-Unit Transformers Neural Machine Translation: Transformer Neural Machine Translation. Transformer Multihead Attentions and FFN, multiple parallel attention.
+Multi-Unit Transformers (MUTE), Transformer. machine translation tasks.
+Transformers: Automatic Corpus Creation: Transformers Natural Language Processing (NLP).
+pretrained transformers, Natural Language Inference (NLI). NewsPH-NLI, ELECTRA.
+Measuring Systematic Generalization Neural Proof Generation Transformers: Transformer language models (TLMs) natural language.
+systematic generalization natural language, TLMs backward-chaining.
+Parameter Norm Growth During Training of Transformers: gradient descent (GD). bias.
+gradient descent (GD) T5. pretrained T5 semi-discretized network activation functions. GD Natural language processing (NLP). transformers, feedforward ReLU networks.
+Deep Transformers Latent Depth: Transformer sequence modeling tasks.
+probabilistic framework layers posterior distributions.
+Transformer network multilingual machine translation posteriors. vanishing gradient deep Transformers.
+WMT English-German machine translation and masked language modeling, deeper Transformers.
+multilingual machine translation many-to-one and one-to-many translation with diverse language pairs.
+Transformers Source Code: natural language processing (NLP), Transformers source code processing, source code and text.
+natural language, source code structured, syntax programming language. Transformer modifications syntactic information.
+Transformers syntactic information. three tasks (code completion, function naming and bug fixing) and syntax-capturing modifications.
+meaningful predictions syntactic information underline syntactic information.
+Calibration of Pre-trained Transformers: Pre-trained Transformers natural language processing.
+BERT RoBERTa, natural language inference, paraphrase detection, commonsense reasoning.
+Subjective Question Answering: inner workings of Transformers: subjectivity.
+sentiment opinion mining. Question Answering, SubjQA. SubjQA QA sentiment natural language utterances, inner workings (latent representations) Transformer-based architecture better understanding "black-box" models.
+Transformer's hidden representations, answer span, clustered vector space erroneous predictions. objective and subjective questions. probability. cosine similarity.
+Assessing Phrasal Representation Composition Transformers: Deep transformer NLP tasks, linguistic inputs.
+systematic analysis phrasal representations state-of-the-art pre-trained transformers.
+Pretrained Transformers for Text Ranking: BERT: text ranking search, natural language processing.
+text ranking transformers, BERT. transformers self-supervised pretraining, natural language processing (NLP), information retrieval (IR).
+transformers ranking problems transformer models reranking multi-stage ranking learned dense representations perform ranking.
+handling long documents, sentence-by-sentence NLP, result quality efficiency query latency.
+transformer architectures pretraining techniques, text ranking. open research questions, pretrained transformers text ranking.
+Dissecting Lottery Ticket Transformers: Structural and Behavioral Study of Sparse Neural Machine Translation: lottery ticket hypothesis sparse Transformers NMT BLEU.
+Transformers semantic information.
+sparse models.
+Attention mechanisms remain remarkably consistent sparsity.
+Computational Power Transformers Implications Sequence Modeling: Transformers sequence modeling tasks.
+inner workings of Transformers.
+Transformers positional encodings, attention heads, residual connections, feedforward networks.
+residual connection. machine translation synthetic tasks.
+Query-Key Normalization Transformers: Low-resource language translation NLP.
+Transformer's normalization QKNorm, normalization technique attention mechanism softmax function.
+key matrix prior to multiplying learnable parameter embedding dimension
+EdinburghNLP: Leveraging Transformers Generalized Augmentation.
+transformers RoBERTa, XLNet, and BERTweet semi-supervised.
+fasttext embeddings.
+Performance evaluation application computation homogeneous machine learning model algorithm image classification: The image classification machine learning model.
+state-of-the-art ensemble model methodologies.
+LiteDepthwiseNet: Lightweight Network Hyperspectral Image Classification: Deep learning hyperspectral image (HSI) classification.
+network architecture, LiteDepthwiseNet, HSI classification.
+Based on 3D depthwise convolution, LiteDepthwiseNet standard convolution depthwise convolution pointwise convolution.
+ReLU layer Batch Normalization layer original 3D depthwise convolution, overfitting phenomenon. models attention, cross-entropy loss balanced cross-entropy loss.
+LiteDepthwiseNet state-of-the-art.
+Satellite Image Classification with Deep Learning: Satellite imagery, law enforcement, and environmental monitoring.
+manual identification of objects imagery. geographic expanses. object detection classification algorithms.
+Deep learning machine learning automation.
+image understanding convolutional neural networks.
+object reconition facility recognition high-resolution, multi-spectral satellite imagery.
+deep learning system classifying objects facilities IARPA Functional Map (fMoW) dataset classes.
+ensemble convolutional neural networks satellite metadata image.
+Python Keras TensorFlow deep-learning-libraries Linux server NVIDIA-Titan-X graphics card.
+CC-Loss: Channel Correlation Loss Image Classification: loss function classification cross-entropy loss.
+intra-class and inter-class constraints.
+loss functions feature distribution model structure.
+channel correlation loss (CC-Loss) classes channels intra-class inter-class. CC-Loss channel attention module channel attention.
+Euclidean distance matrix channel attention vectors. feature embedding intra-class compactness inter-class separability.
+CC-Loss state-of-the-art loss three image classification datasets.
+Bounding Boxes: Street View Image Classification Context Encoding Detected Buildings: Street view images classification classification models visual features.
+Detector-Encoder-Classifier. image-level models convolutional neural networks (CNNs), bounding boxes buildings street view images detector.
+contextual information co-occurrence patterns (Context encOding of Detected buildINGs).
+bounding box metadata recurrent neural network (RNN). "BEAUTY" (Building-dEtection-And-Urban-funcTionalzone-portraYing).
+multi-class building detection. "BEAUTY" (Building-dEtection-And-Urban-funcTionalzone-portraYing) CNN.
+Glance and Focus: Dynamic Approach Reducing Spatial Redundancy Image Classification: deep convolutional neural networks (CNNs) high resolution images.
+regions image novel framework image classification sequence strategically selected from the original image with reinforcement learning.
+state-of-the-art light-weighted CNNs (such as MobileNets, EfficientNets and RegNets).
+ImageNet deep models.
+average latency MobileNet-V3 iPhone XS Max sacrificing accuracy.
+Semantic video segmentation autonomous driving: semantic video segmentation autonomous driving, road detection real-time video.
+fully convolutional network.
+Centroid Loss Weakly Supervised Semantic Segmentation Quality Control Inspection Application: Process automation accuracy productivity, machine vision system. semantic segmentation solution.
+vessel corrosion detection, detection system quality control surgery toolboxes sterilization.
+pixel-level ground truth.
+clustering approach semantic segmentation network, weakly supervised annotations.
+vessels' structure hospital surgery toolboxes.
+weak annotations.
+Multi-Attention-Network Semantic Segmentation High-Resolution Remote Sensing Images: Semantic segmentation, yield estimation, and economic assessment.
+semantic segmentation remote sensing images convolutional neural networks.
+encoder-decoder architectures U-Net.
+attention semantic segmentation, attention impede attention.
+Multi-Attention-Network (MANet), contextual dependencies attention mechanisms.
+A attention mechanism kernel attention (KA).
+kernel attention, feature maps ResNeXt-101 with their corresponding global dependencies.
+MANet transcends the DeepLab V3+, PSPNet, FastFCN.
+Domain Adaptation LiDAR Semantic Segmentation: LiDAR semantic segmentation 3D semantic.
+learning-based approach distribution semantic classes.
+Semantic Segmentation Self-Driving Discrete Wasserstein Training: Semantic segmentation (SS) self-driving cars, robotics.
+cross entropy (CE) mean Intersection-over Union (mIoU).
+cross entropy loss self-driving.
+segmentation.
+importance-aware inter-class correlation Wasserstein training framework distance matrix.
+The ground distance matrix pre-defined priori, importance-ignored.
+From an optimization perspective pre-defined ground distance.
+CamVid Cityscapes datasets SegNet, ENet, FCN and Deeplab).
+Wasserstein loss superior segmentation performance safe-driving.
+Dense Dual-Path Network for Real-time Semantic Segmentation: Semantic segmentation.
+Dense Dual-Path Network (DDPNet) real-time semantic segmentation.
+dense connectivity network Dual-Path-Module (DPM) multi-scale contexts.
+high-resolution feature maps segmentation output upsampling.
+DDPNet. SCityscapes dataset, DDPNet mIoU.
+DDPNet accuracy.
+HCNet: Hierarchical Context Network Semantic Segmentation.
+selfattention mechanism global context.
+pixels weak feature correlation.
+Modeling pixel-level correlation matrix extremely redundant self-attention mechanism.
+hierarchical context network homogeneous pixels correlations heterogeneous pixels weak correlations.
+multi-scale guided presegmentation feature map classed-based homogeneous regions.
+homogeneous region, pixel context module pixel-level correlations.
+Cityscapes ISPRS Vaihingen.
+PseudoSeg: Pseudo Labels Semantic Segmentation: semi-supervised learning (SSL) consistency regularization pseudo-labeling image classification low-data regime.
+classification, semantic segmentation labeling costs. data-efficient training methods.
+structured outputs segmentation designing pseudo-labeling augmentation SSL strategies.
+pseudo-labeling well-calibrated pseudo labels weakly-labeled data.
+pseudo labels data augmentation consistency training segmentation.
+Noisy-LSTM: Temporal Awareness Video Semantic Segmentation: Semantic video segmentation. Noisy-LSTM, convolutional LSTMs (ConvLSTMs) temporal coherency video frames.
+frame video sequence noises.
+strategy spoils temporal coherency video frames training temporal links ConvLSTMs, feature extraction video frames, regularizer overfitting, annotation computational.
+state-of-the-art performances CityScapes EndoVis2018 datasets.
+Comprehensive Analysis WeaklySupervised Semantic Segmentation Image Domains: weakly supervised semantic segmentation.
+image annotations generate, weak supervision Semantic Segmentation.
+background Semantic Segmentation problems presented scene images satellite images images image.
+weakly supervised semantic segmentation scene, histopathology, satellite image.
+histopathology satellite images weakly supervised semantic segmentation scene images, boundaries class cooccurrence.
+weakly supervised semantic segmentation.
+SemanticSegmentation SemanticEditingSegmentation Map MultiExpansion: SemanticEditingSegmentation imagegeneration, imagegeneration.
+segmentationmap semantic inputs.
+MExGAN SemanticEditingSegmentation map, Multi-Expansion (MEx) MEx areas. MEx area mask area boundary context. MEx loss, Approximated MEx (A-MEx) loss.
+SemanticEditingSegmentation MExGAN image training data.
+SemanticEditingSegmentation map natural image inpainting.
+Auto Seg-Loss: Searching Metric Surrogates Semantic Segmentation: searching surrogate losses mainstream semantic segmentation.
+existing loss functions individual metrics.
+Extensive experiments PASCAL VOC Cityscapes.
+SemiSupervised Semantic Segmentation Earth Observation: semisupervised learning. raw image data. large databases.
+Earth Observation surface coverage, scenes restricted classes.
+novel largescale dataset semisupervised semantic segmentation Earth Observation, MiniFrance suite.
+MiniFrance high resolution aerial images, climates, landscapes, urban countryside scenes; semantics.
+MiniFrance dataset semisupervised learning: labeled unlabeled images.
+data representativeness analysis appearance similarity MiniFrance data, semisupervised. semisupervised deep architectures multitask learning MiniFrance.
+Encoder Decoder semantic segmentation models for electroluminescence images thinfilm photovoltaic modules: image segmentation deep neural networks semantic segmentation of electroluminescence (EL) images of thinfilm modules.
+We utilize the encoder-decoder deep neural network architecture. images (e.g. thermography) solar cell technologies (e.g. crystalline silicon modules).
+EL images of Copper Indium Gallium Diselenide (CIGS) thinfilm modules.
+encoder-decoder.
+6000 EL images segmentation of EL images images.
+Robust Consistent Estimation of Word Embedding fine-tuning Word2Vec Model: Word embedding vector syntactical semantic characteristics natural language processing.
+deep learning based models for the vectorization word2vec, fasttext, gensim, glove. word2vec hyper-parameters.
+fine-tuning word2vec model, intrinsic extrinsic evaluations. cluster vectors relational similarity of words, word embeddings news article classifier extrinsic evaluation.
+skip-gram word2vec.
+Fair Embedding Engine: Gender Bias Word Embeddings: Nword embedding, training corpora.
+syntactic semantic embeddings.
+Fair Embedding Engine (FEE) gender bias word embeddings.
+FEE gender bias word embeddings.
+FEE  embedding models.
+All Word Embeddings from One Embedding: neural network-based models natural language processing (NLP), word embeddings.
+embedding matrix size vocabulary size. embeddings transforming shared embedding.
+ALONE allwordembeddingsfromone, constructed embedding feed-forward neural network.
+filter vectors conventional embedding matrix, vocabulary size.
+filter construction approach.
+ALONE can be used as word representation sufficiently through an experiment on the reconstruction of pre-trained word embeddings.
+In addition, we also conduct experiments on NLP application tasks: machine translation and summarization.
+We combined ALONE with the current state-of-the-art encoder-decoder model, the Transformer, and achieved comparable scores short summarization with less parameters.
+PBoS: Probabilistic Bag-of-Subwords Word Embedding: word embeddings: word vectors finite vocabulary, embedding vectors vocabulary contextual information.
+subword segmentation subword-based word embedding. bag-of-subwords (PBoS) bag-of-subwords segmentations likelihood.
+PBoS subword segmentations subword rankings.
+Word similarity and POS tagging PBoS subword-level word embeddings languages.
+Discrete Word Embedding Logical Natural Language Understanding: unsupervised neural model.
+binary embedding vector arithmetic operations continuous embeddings.
+CogniFNN: Fuzzy Neural Network Framework Cognitive Word Embedding Evaluation: Word embeddings semantic representations, embedding qualities CogniFNN framework, fuzzy neural networks non-linear non-stationary characteristics EEG, fMRI, and eye-tracking, mean square error multiple hypotheses testing CogniFNN framework. CogniFNN context-independent (GloVe) context-sensitive (BERT) word embeddings.
+Word embedding neural network grammatical gender word embeddings grammatical gender Swedish.
+computational linguistics general linguistics. grammatical gender in language word embedding models artificial neural networks.
+previous linguistic hypotheses on assignment and usage of grammatical gender linguistic perspective.
+Text Processing Sentiment Classification Word Embedding: text classification sentiment analysis. text domain (Twitter) and application (sentiment classification).
+Skip gram-based word embeddings Twitter colloquial words, emojis, and hashtag conventional literature corpora.
+sentiment classification.
+Decomposing Word Embedding Capsule Network: Word sense disambiguation sense ambiguous word.
+pre-trained language multi-embeddings unsupervised word embedding.
+capsule network-based approach, image segmentation.
+Sense embedding, CapsDecE2S.
+unsupervised ambiguous embedding capsule network multiple morpheme-like vectors, semantic language. attention operations, CapsDecE2S morpheme-like context-specific sense embedding.
+CapsDecE2S, sense matching.
+binary classification CapsDecE2S corpora Word-in-Context English all-words Word Sense Disambiguation, the CapsDecE2S word sense disambiguation tasks.
